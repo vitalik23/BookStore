@@ -1,0 +1,109 @@
+input.monthCard{
+    background-image: url(../../../../assets/calendar.png);   
+    background-repeat: no-repeat;  
+    background-size: 10%;
+    background-position: 2px; 
+    padding-left: 20px;
+    width: 135px;
+    float: left;
+    margin-right: 5px;
+}
+
+input.yearCard{
+    background-image: url(../../../../assets/calendar.png);   
+    background-repeat: no-repeat;  
+    background-size: 10%;
+    background-position: 2px; 
+    padding-left: 20px;
+    width: 132px;
+}
+
+input.card{
+    background-image: url(../../../../assets/credit-card.png);   
+    background-repeat: no-repeat;  
+    background-size: 6%;
+    background-position: 2px; 
+    padding-left: 20px;
+    width: 270px;
+}
+
+input.cardCVC{
+    background-image: url(../../../../assets/cvc.png);   
+    background-repeat: no-repeat;  
+    background-size: 6%;
+    background-position: 2px; 
+    padding-left: 103px;
+}
+
+.shopName{
+    font-family: cursive;
+    font-size: 16px;
+    font-weight: 550;
+    padding-left: 100px;
+}
+
+.payDescription{
+    font-family: cursive;
+    padding-left: 80px;
+    padding-bottom: 10px;
+
+}
+
+.description{
+    width: 270px;
+}
+
+.descriptionForPay{
+    margin-bottom: 40px;
+}
+
+.payButton{
+    width: 270px;
+    background: #2a77e3;
+    box-shadow: 2px 2px 0px 0px;
+}
+
+.price{
+    color: white;
+    font-family: cursive;
+}
+
+.aCancel{
+    float: right;
+}
+
+.imgCancel{
+    width: 20px;
+    height: 20px;
+    transition: 0.2s;
+}
+
+.imgCancel:hover{
+    transform: scale(1.2);
+}
+
+.cancel{
+    padding-bottom: 10px;
+}
+
+.imgOk{
+    width: 80px;
+    height: 80px;
+    margin-left: 120px;
+    margin-bottom: 30px;
+}
+
+.labelThank{
+    font-family: cursive;
+    font-size: 16px;
+    padding-left: 70px;
+}
+
+.buttonContinue{
+    width: 100px;
+    font-family: cursive;
+    box-shadow: 2px 2px 0px 0px;
+    background: lightgreen;
+    margin-left: 100px;
+    margin-top: 20px;
+}

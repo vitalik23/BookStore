@@ -1,0 +1,103 @@
+table{
+    border: 2px solid black;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.authorAddCircle{
+    float: right;
+    padding-right: 115px;
+    margin-bottom: 5px;
+
+}
+
+.authorAddCircle:hover::after { 
+    content: attr(data-title); 
+    left: 83%; 
+    top: 12%;
+    z-index: 1;
+    position: absolute;
+    background: white;
+    font-family: cursive; 
+    font-size: 14px; 
+    padding: 5px 10px;
+    border: 1px solid #333;
+    border-radius: 10px 0px 10px 10px;
+}
+
+.authorMenuInput{
+    border: 1px solid black;
+    height: 30px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.mat-column-name{
+    width: 800px;
+    padding-left: 5px;
+}
+
+.mat-column-id{
+    width: 100px;
+    padding-left: 0px;
+}
+
+.mat-column-title{
+    width: 300px;
+    padding-left: 5px;
+
+}
+.mat-column-edit{
+    width: 100px;
+    padding-left: 23px;
+}
+
+tr:nth-child(even){
+    background: white;
+}
+
+tr:nth-child(odd){
+    background: rgb(226, 226, 226);
+}
+
+td, th{
+    border-right: 2px solid black;
+}
+
+th.list{
+    background: silver;
+    font-family: cursive;
+    font-size: medium;
+    font-weight: 500;
+    color: black;
+    
+}
+
+li {
+    list-style-type: none; 
+   }
+
+.buttonImg{
+    width: 20px;
+    height: 20px;
+    transition: 0.2s; 
+}
+
+.buttonImg:hover{
+    transform: scale(1.2);
+}
+
+.addButtonImg{
+    width: 25px;
+    height: 25px;
+    transition: 0.2s; 
+
+}
+
+.authorLinkAddAuthor img:hover{
+    transform: scale(1.2);
+}
+
+.liList{
+    list-style: none;
+    padding:0;
+}

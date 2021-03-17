@@ -1,0 +1,61 @@
+
+
+
+<div class="authorAddCircle" data-title="Add new Author">
+    <a class="authorLinkAddAuthor" (click)="addAuthor()">
+        <img class="addButtonImg" src="/assets/add.png" />
+    </a>
+</div>
+<div class="container">
+
+    <table mat-table [dataSource]="authors | paginate: { id:'list_pagination',
+                                                            itemsPerPage: pageSize, 
+                                                            currentPage: pageNumber,
+                                                            totalItems: totalItems }">
+        <ng-container matColumnDef="id">
+            <th class="list" mat-header-cell *matHeaderCellDef>ID<img class="buttonImg"
+                    src="/assets/sort.png" mat-button (click)="sorting('Id')" /></th>
+            <td mat-cell *matCellDef="let author">{{author.id}}</td>
+        </ng-container>
+        <ng-container matColumnDef="name">
+            <th class="list" mat-header-cell *matHeaderCellDef>
+                Name
+                <img class="buttonImg" src="/assets/sort.png" mat-button (click)="sorting('Name')" />
+                <img class="buttonImg" src="/assets/menu.png" mat-button [matMenuTriggerFor]="menu" />
+                <mat-menu #menu="matMenu">
+                    <input class="authorMenuInput" type="text" mat-menu-item [(ngModel)]="authorName"
+                        (ngModelChange)="authorFilter()" placeholder="search" />
+                </mat-menu>
+            </th>
+            <td mat-cell *matCellDef="let author">{{author.name}}</td>
+        </ng-container>
+        <ng-container matColumnDef="title">
+            <th class="list" mat-header-cell *matHeaderCellDef>Product</th>
+            <td mat-cell *matCellDef="let author">
+                <ul class="liList">
+                    <li *ngFor="let author of author.authorInPrintingEdition">
+                        {{author.printingEdition.title}}
+                    </li>
+                </ul>
+            </td>
+        </ng-container>
+        <ng-container matColumnDef="edit">
+            <th class="list" mat-header-cell *matHeaderCellDef></th>
+            <td mat-cell *matCellDef="let author">
+                <a class="listEditButton" (click)="updateAuthor(author)"> <img class="buttonImg"
+                        src="/assets/edit.png" /></a>
+                <a class="listDeleteButton" (click)="deleteAuthor(author.id)"><img class="buttonImg"
+                        src="/assets/delete.png" /></a>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="['id', 'name', 'title', 'edit']"></tr>
+        <tr mat-row *matRowDef="let row; columns: ['id', 'name', 'title', 'edit']"></tr>
+
+    </table>
+
+    <div class="pagination">
+        <pagination-controls id="list_pagination" maxSize="6" directionLinks="true" (pageChange)="pagedChanged($event)">
+        </pagination-controls>
+    </div>
+</div>

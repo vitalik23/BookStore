@@ -1,0 +1,106 @@
+.orderTable{
+    border: 2px solid black;
+    width: 100%;
+}
+
+td, th{
+    border-right: 2px solid black;
+    height: 5%;
+    font-family: cursive;
+}
+
+th{
+    
+    color: black;
+    font-size: 14px;
+}
+
+tr:nth-child(even){
+    background: white;
+    
+}
+
+tr:nth-child(odd){
+    background: rgb(226, 226, 226);
+}
+
+.buttonPaid{
+    background: lightgreen;
+    box-shadow: 2px 2px 0px 0px;
+    width: 100px;
+}
+
+li{
+    list-style-type: none; 
+    padding-left: 0;
+}
+
+ul {
+    margin-left: 0;
+    padding-left: 0; 
+   }
+
+.mat-column-orderId{
+    width: 7%;
+}
+
+.mat-column-orderTime{
+    width: 10%;
+}
+
+.mat-column-product{
+    width: 10%;
+}
+
+.mat-column-title{
+    width: 30%;
+}
+
+.mat-column-qty{
+    width: 5%;
+}
+
+.mat-column-orderAmount{
+    width: 10%;
+}
+
+.mat-column-orderStatus{
+    width: 8%;
+}
+
+.mat-column-userName{
+    width: 10%;
+}
+
+.mat-column-userEmail{
+    width: 10%;
+}
+
+.buttonImg{
+    width: 20px;
+    height: 20px;
+}
+
+.checkboxPaid{
+    margin-left: 5px;
+}
+
+.labelPaid{
+    float: right;
+    padding-top: 13px;
+    padding-right: 50px;
+    font-family: cursive;
+    font-size: 16px;
+}
+
+.labelUnpaid{
+    float: right;
+    padding-top: 13px;
+    padding-right: 30px;
+    font-family: cursive;
+    font-size: 16px;
+}
+
+.checkboxUnpaid{
+    margin-left: 5px;
+}

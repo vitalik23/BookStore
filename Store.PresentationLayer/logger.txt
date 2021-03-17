@@ -1,0 +1,378 @@
+16.03.2021 13:14:18 Application started. Press Ctrl+C to shut down. 
+16.03.2021 13:14:18 Hosting environment: Development 
+16.03.2021 13:14:18 Content root path: C:\Users\Anuitex\Source\Repos\BookStore\Store.PresentationLayer 
+16.03.2021 13:14:18 REQUEST METHOD:  GET, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/ 
+16.03.2021 13:14:22 REQUEST METHOD:  OPTIONS, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/printingedition/getmaxpriceprintingedition 
+16.03.2021 13:14:22 REQUEST METHOD:  OPTIONS, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/printingedition/getprintingeditions 
+16.03.2021 13:14:22 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/printingedition/getmaxpriceprintingedition 
+16.03.2021 13:14:23 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/printingedition/getprintingeditions 
+16.03.2021 13:14:23 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/printingedition/getmaxpriceprintingedition 
+16.03.2021 13:14:23 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/printingedition/getprintingeditions 
+16.03.2021 13:14:29 REQUEST METHOD:  OPTIONS, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/account/signin 
+16.03.2021 13:14:29 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/account/signin 
+16.03.2021 13:14:30 REQUEST METHOD:  OPTIONS, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/printingedition/getmaxpriceprintingedition 
+16.03.2021 13:14:30 REQUEST METHOD:  OPTIONS, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/printingedition/getprintingeditions 
+16.03.2021 13:14:30 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/printingedition/getmaxpriceprintingedition 
+16.03.2021 13:14:30 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/printingedition/getprintingeditions 
+16.03.2021 13:14:32 REQUEST METHOD:  OPTIONS, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/author/getauthors 
+16.03.2021 13:14:59 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/author/getauthors 
+16.03.2021 13:15:03 REQUEST METHOD:  OPTIONS, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/author/getauthors 
+16.03.2021 13:15:03 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/author/getauthors 
+16.03.2021 13:15:04 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/author/getauthors 
+16.03.2021 13:23:18 Application started. Press Ctrl+C to shut down. 
+16.03.2021 13:23:18 Hosting environment: Development 
+16.03.2021 13:23:18 Content root path: C:\Users\Anuitex\Source\Repos\BookStore\Store.PresentationLayer 
+16.03.2021 13:23:19 REQUEST METHOD:  GET, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/ 
+16.03.2021 13:23:23 REQUEST METHOD:  OPTIONS, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/author/getauthors 
+16.03.2021 13:23:24 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/author/getauthors 
+16.03.2021 13:23:34 REQUEST METHOD:  OPTIONS, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/order/getorders 
+16.03.2021 13:23:34 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/order/getorders 
+16.03.2021 13:23:36 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/order/getorders 
+16.03.2021 13:23:37 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/order/getorders 
+16.03.2021 13:23:38 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/order/getorders 
+16.03.2021 13:23:39 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/order/getorders 
+16.03.2021 13:23:40 REQUEST METHOD:  OPTIONS, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/order/getorders 
+16.03.2021 13:23:40 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/order/getorders 
+16.03.2021 13:31:20 Application started. Press Ctrl+C to shut down. 
+16.03.2021 13:31:20 Hosting environment: Development 
+16.03.2021 13:31:20 Content root path: C:\Users\Anuitex\Source\Repos\BookStore\Store.PresentationLayer 
+16.03.2021 13:31:20 REQUEST METHOD:  GET, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/ 
+16.03.2021 13:31:20 REQUEST METHOD:  OPTIONS, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/order/getorders 
+16.03.2021 13:31:21 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/order/getorders 
+16.03.2021 13:31:25 REQUEST METHOD:  OPTIONS, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/admin/getusers 
+16.03.2021 13:31:25 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/admin/getusers 
+16.03.2021 13:31:28 REQUEST METHOD:  OPTIONS, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/printingedition/getprintingeditions 
+16.03.2021 13:31:28 Exception -->   Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Object -> IEnumerable`1
+System.Object -> System.Collections.Generic.IEnumerable`1[[Store.BusinessLogicLayer.Models.PrintingEditions.PrintingEditionModel, Store.BusinessLogicLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] 
+16.03.2021 13:31:29 Stack Trace -->      at lambda_method586(Closure , Object , IEnumerable`1 , ResolutionContext )
+   at Store.BusinessLogicLayer.Services.PrintingEditionService.GetFilteredPrintingEditionsAsync(PrintingEditionFilterModel model, PaginationFilterModel pagination) in C:\Users\Anuitex\source\repos\BookStore\Store.BusinessLogicLayer\Services\PrintingEditionService.cs:line 74
+   at Store.PresentationLayer.Controllers.PrintingEditionController.GetPrintingEditionAsync(PrintingEditionFilterAndPaginationModel model) in C:\Users\Anuitex\source\repos\BookStore\Store.PresentationLayer\Controllers\PrintingEditionController.cs:line 34
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Store.PresentationLayer.Middlewares.ExceptionMiddleware.Invoke(HttpContext context) in C:\Users\Anuitex\source\repos\BookStore\Store.PresentationLayer\Middlewares\ExceptionMiddleware.cs:line 35 
+16.03.2021 13:31:33 REQUEST METHOD:  OPTIONS, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/author/getauthors 
+16.03.2021 13:31:33 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/author/getauthors 
+16.03.2021 13:31:34 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/author/getauthors 
+16.03.2021 13:31:37 REQUEST METHOD:  OPTIONS, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/printingedition/getprintingeditions 
+16.03.2021 13:31:38 Exception -->   Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Object -> IEnumerable`1
+System.Object -> System.Collections.Generic.IEnumerable`1[[Store.BusinessLogicLayer.Models.PrintingEditions.PrintingEditionModel, Store.BusinessLogicLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] 
+16.03.2021 13:31:38 Stack Trace -->      at lambda_method586(Closure , Object , IEnumerable`1 , ResolutionContext )
+   at Store.BusinessLogicLayer.Services.PrintingEditionService.GetFilteredPrintingEditionsAsync(PrintingEditionFilterModel model, PaginationFilterModel pagination) in C:\Users\Anuitex\source\repos\BookStore\Store.BusinessLogicLayer\Services\PrintingEditionService.cs:line 74
+   at Store.PresentationLayer.Controllers.PrintingEditionController.GetPrintingEditionAsync(PrintingEditionFilterAndPaginationModel model) in C:\Users\Anuitex\source\repos\BookStore\Store.PresentationLayer\Controllers\PrintingEditionController.cs:line 34
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Store.PresentationLayer.Middlewares.ExceptionMiddleware.Invoke(HttpContext context) in C:\Users\Anuitex\source\repos\BookStore\Store.PresentationLayer\Middlewares\ExceptionMiddleware.cs:line 35 
+16.03.2021 13:32:23 Application started. Press Ctrl+C to shut down. 
+16.03.2021 13:32:23 Hosting environment: Development 
+16.03.2021 13:32:23 Content root path: C:\Users\Anuitex\Source\Repos\BookStore\Store.PresentationLayer 
+16.03.2021 13:32:23 REQUEST METHOD:  GET, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/ 
+16.03.2021 13:32:26 REQUEST METHOD:  OPTIONS, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/printingedition/getprintingeditions 
+16.03.2021 13:32:27 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/printingedition/getprintingeditions 
+16.03.2021 13:32:29 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/printingedition/getprintingeditions 
+16.03.2021 13:32:32 REQUEST METHOD:  OPTIONS, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/printingedition/getprintingeditions 
+16.03.2021 13:32:32 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/printingedition/getprintingeditions 
+16.03.2021 13:32:32 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/printingedition/getprintingeditions 
+16.03.2021 13:32:32 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/printingedition/getprintingeditions 
+16.03.2021 15:08:23 Application started. Press Ctrl+C to shut down. 
+16.03.2021 15:08:23 Hosting environment: Development 
+16.03.2021 15:08:23 Content root path: C:\Users\Anuitex\Source\Repos\BookStore\Store.PresentationLayer 
+16.03.2021 15:08:23 REQUEST METHOD:  GET, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/ 
+16.03.2021 15:08:31 REQUEST METHOD:  OPTIONS, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/printingedition/getprintingeditions 
+16.03.2021 15:08:32 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/printingedition/getprintingeditions 
+16.03.2021 15:08:38 REQUEST METHOD:  OPTIONS, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/account/signin 
+16.03.2021 15:08:38 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/account/signin 
+16.03.2021 15:08:39 REQUEST METHOD:  OPTIONS, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/printingedition/getmaxpriceprintingedition 
+16.03.2021 15:08:39 REQUEST METHOD:  OPTIONS, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/printingedition/getprintingeditions 
+16.03.2021 15:08:39 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/printingedition/getprintingeditions 
+16.03.2021 15:08:39 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/printingedition/getmaxpriceprintingedition 
+16.03.2021 15:08:41 REQUEST METHOD:  OPTIONS, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/order/getorders 
+16.03.2021 15:08:41 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/order/getorders 
+16.03.2021 15:08:43 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/order/getorders 
+16.03.2021 15:08:44 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/order/getorders 
+16.03.2021 15:08:46 REQUEST METHOD:  OPTIONS, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/admin/getusers 
+16.03.2021 15:08:46 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/admin/getusers 
+16.03.2021 15:08:49 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/admin/getusers 
+16.03.2021 15:08:49 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/admin/getusers 
+16.03.2021 15:08:50 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/admin/getusers 
+16.03.2021 15:08:51 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/admin/getusers 
+16.03.2021 15:08:56 REQUEST METHOD:  OPTIONS, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/printingedition/getprintingeditions 
+16.03.2021 15:08:56 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/printingedition/getprintingeditions 
+16.03.2021 15:08:57 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/printingedition/getprintingeditions 
+16.03.2021 15:09:00 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/printingedition/getprintingeditions 
+16.03.2021 15:09:01 REQUEST METHOD:  OPTIONS, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/printingedition/getprintingeditions 
+16.03.2021 15:09:01 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/printingedition/getprintingeditions 
+16.03.2021 15:09:04 REQUEST METHOD:  OPTIONS, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/author/getauthors 
+16.03.2021 15:09:05 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/author/getauthors 
+16.03.2021 15:09:08 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/author/getauthors 
+16.03.2021 15:09:08 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/author/getauthors 
+16.03.2021 15:09:09 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/author/getauthors 
+16.03.2021 15:09:09 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/author/getauthors 
+16.03.2021 15:09:13 REQUEST METHOD:  OPTIONS, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/user/profile 
+16.03.2021 15:09:13 REQUEST METHOD:  GET, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/user/profile 
+16.03.2021 15:09:43 REQUEST METHOD:  OPTIONS, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/printingedition/getmaxpriceprintingedition 
+16.03.2021 15:09:43 REQUEST METHOD:  OPTIONS, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/printingedition/getprintingeditions 
+16.03.2021 15:09:43 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/printingedition/getmaxpriceprintingedition 
+16.03.2021 15:09:43 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/printingedition/getprintingeditions 
+16.03.2021 15:20:42 Application started. Press Ctrl+C to shut down. 
+16.03.2021 15:20:42 Hosting environment: Development 
+16.03.2021 15:20:42 Content root path: C:\Users\Anuitex\Source\Repos\BookStore\Store.PresentationLayer 
+16.03.2021 15:20:43 REQUEST METHOD:  GET, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/ 
+16.03.2021 15:20:48 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/account/signin 
+16.03.2021 15:21:10 Exception -->   The SSL connection could not be established, see inner exception. 
+16.03.2021 15:21:10 Stack Trace -->      at Stripe.SystemNetHttpClient.MakeRequestAsync(StripeRequest request, CancellationToken cancellationToken)
+   at Stripe.StripeClient.RequestAsync[T](HttpMethod method, String path, BaseOptions options, RequestOptions requestOptions, CancellationToken cancellationToken)
+   at Stripe.Service`1.RequestAsync[T](HttpMethod method, String path, BaseOptions options, RequestOptions requestOptions, CancellationToken cancellationToken)
+   at Store.BusinessLogicLayer.Services.OrderService.PayAsync(PaymentModel model) in C:\Users\Anuitex\source\repos\BookStore\Store.BusinessLogicLayer\Services\OrderService.cs:line 152
+   at Store.PresentationLayer.Controllers.OrderController.BuyAsync(PaymentModel model) in C:\Users\Anuitex\source\repos\BookStore\Store.PresentationLayer\Controllers\OrderController.cs:line 39
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Store.PresentationLayer.Middlewares.ExceptionMiddleware.Invoke(HttpContext context) in C:\Users\Anuitex\source\repos\BookStore\Store.PresentationLayer\Middlewares\ExceptionMiddleware.cs:line 35 
+16.03.2021 15:22:02 Application started. Press Ctrl+C to shut down. 
+16.03.2021 15:22:02 Hosting environment: Development 
+16.03.2021 15:22:02 Content root path: C:\Users\Anuitex\Source\Repos\BookStore\Store.PresentationLayer 
+16.03.2021 15:22:02 REQUEST METHOD:  GET, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/ 
+16.03.2021 15:22:08 Exception -->   The SSL connection could not be established, see inner exception. 
+16.03.2021 15:22:08 Stack Trace -->      at Stripe.SystemNetHttpClient.MakeRequestAsync(StripeRequest request, CancellationToken cancellationToken)
+   at Stripe.StripeClient.RequestAsync[T](HttpMethod method, String path, BaseOptions options, RequestOptions requestOptions, CancellationToken cancellationToken)
+   at Stripe.Service`1.RequestAsync[T](HttpMethod method, String path, BaseOptions options, RequestOptions requestOptions, CancellationToken cancellationToken)
+   at Store.BusinessLogicLayer.Services.OrderService.PayAsync(PaymentModel model) in C:\Users\Anuitex\source\repos\BookStore\Store.BusinessLogicLayer\Services\OrderService.cs:line 151
+   at Store.PresentationLayer.Controllers.OrderController.BuyAsync(PaymentModel model) in C:\Users\Anuitex\source\repos\BookStore\Store.PresentationLayer\Controllers\OrderController.cs:line 39
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Store.PresentationLayer.Middlewares.ExceptionMiddleware.Invoke(HttpContext context) in C:\Users\Anuitex\source\repos\BookStore\Store.PresentationLayer\Middlewares\ExceptionMiddleware.cs:line 35 
+16.03.2021 15:35:56 Application started. Press Ctrl+C to shut down. 
+16.03.2021 15:35:56 Hosting environment: Development 
+16.03.2021 15:35:56 Content root path: C:\Users\Anuitex\Source\Repos\BookStore\Store.PresentationLayer 
+16.03.2021 15:35:56 REQUEST METHOD:  GET, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/ 
+16.03.2021 15:36:02 Exception -->   The SSL connection could not be established, see inner exception. 
+16.03.2021 15:36:03 Stack Trace -->      at Stripe.SystemNetHttpClient.MakeRequestAsync(StripeRequest request, CancellationToken cancellationToken)
+   at Stripe.StripeClient.RequestAsync[T](HttpMethod method, String path, BaseOptions options, RequestOptions requestOptions, CancellationToken cancellationToken)
+   at Stripe.Service`1.RequestAsync[T](HttpMethod method, String path, BaseOptions options, RequestOptions requestOptions, CancellationToken cancellationToken)
+   at Store.BusinessLogicLayer.Services.OrderService.PayAsync(PaymentModel model) in C:\Users\Anuitex\source\repos\BookStore\Store.BusinessLogicLayer\Services\OrderService.cs:line 147
+   at Store.PresentationLayer.Controllers.OrderController.BuyAsync(PaymentModel model) in C:\Users\Anuitex\source\repos\BookStore\Store.PresentationLayer\Controllers\OrderController.cs:line 39
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Store.PresentationLayer.Middlewares.ExceptionMiddleware.Invoke(HttpContext context) in C:\Users\Anuitex\source\repos\BookStore\Store.PresentationLayer\Middlewares\ExceptionMiddleware.cs:line 35 
+16.03.2021 15:36:31 Application started. Press Ctrl+C to shut down. 
+16.03.2021 15:36:31 Hosting environment: Development 
+16.03.2021 15:36:31 Content root path: C:\Users\Anuitex\Source\Repos\BookStore\Store.PresentationLayer 
+16.03.2021 15:36:31 REQUEST METHOD:  GET, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/ 
+16.03.2021 15:36:40 Exception -->   The SSL connection could not be established, see inner exception. 
+16.03.2021 15:36:40 Stack Trace -->      at Stripe.SystemNetHttpClient.MakeRequestAsync(StripeRequest request, CancellationToken cancellationToken)
+   at Stripe.StripeClient.RequestAsync[T](HttpMethod method, String path, BaseOptions options, RequestOptions requestOptions, CancellationToken cancellationToken)
+   at Stripe.Service`1.RequestAsync[T](HttpMethod method, String path, BaseOptions options, RequestOptions requestOptions, CancellationToken cancellationToken)
+   at Store.BusinessLogicLayer.Services.OrderService.PayAsync(PaymentModel model) in C:\Users\Anuitex\source\repos\BookStore\Store.BusinessLogicLayer\Services\OrderService.cs:line 147
+   at Store.PresentationLayer.Controllers.OrderController.BuyAsync(PaymentModel model) in C:\Users\Anuitex\source\repos\BookStore\Store.PresentationLayer\Controllers\OrderController.cs:line 39
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Store.PresentationLayer.Middlewares.ExceptionMiddleware.Invoke(HttpContext context) in C:\Users\Anuitex\source\repos\BookStore\Store.PresentationLayer\Middlewares\ExceptionMiddleware.cs:line 35 
+16.03.2021 15:43:01 Application started. Press Ctrl+C to shut down. 
+16.03.2021 15:43:01 Hosting environment: Development 
+16.03.2021 15:43:01 Content root path: C:\Users\Anuitex\Source\Repos\BookStore\Store.PresentationLayer 
+16.03.2021 15:43:01 REQUEST METHOD:  GET, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/ 
+16.03.2021 15:43:04 REQUEST METHOD:  OPTIONS, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/printingedition/getprintingeditions 
+16.03.2021 15:43:04 REQUEST METHOD:  OPTIONS, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/printingedition/getmaxpriceprintingedition 
+16.03.2021 15:43:05 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/printingedition/getmaxpriceprintingedition 
+16.03.2021 15:43:05 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/printingedition/getprintingeditions 
+16.03.2021 15:45:56 Application started. Press Ctrl+C to shut down. 
+16.03.2021 15:45:56 Hosting environment: Development 
+16.03.2021 15:45:56 Content root path: C:\Users\Anuitex\Source\Repos\BookStore\Store.PresentationLayer 
+16.03.2021 15:45:57 REQUEST METHOD:  GET, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/ 
+16.03.2021 15:46:32 Application started. Press Ctrl+C to shut down. 
+16.03.2021 15:46:32 Hosting environment: Development 
+16.03.2021 15:46:32 Content root path: C:\Users\Anuitex\Source\Repos\BookStore\Store.PresentationLayer 
+16.03.2021 15:46:32 REQUEST METHOD:  GET, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/ 
+16.03.2021 15:46:39 Exception -->   The SSL connection could not be established, see inner exception. 
+16.03.2021 15:46:39 Stack Trace -->      at Stripe.SystemNetHttpClient.MakeRequestAsync(StripeRequest request, CancellationToken cancellationToken)
+   at Stripe.StripeClient.RequestAsync[T](HttpMethod method, String path, BaseOptions options, RequestOptions requestOptions, CancellationToken cancellationToken)
+   at Stripe.Service`1.RequestAsync[T](HttpMethod method, String path, BaseOptions options, RequestOptions requestOptions, CancellationToken cancellationToken)
+   at Store.BusinessLogicLayer.Services.OrderService.PayAsync(PaymentModel model) in C:\Users\Anuitex\source\repos\BookStore\Store.BusinessLogicLayer\Services\OrderService.cs:line 142
+   at Store.PresentationLayer.Controllers.OrderController.BuyAsync(PaymentModel model) in C:\Users\Anuitex\source\repos\BookStore\Store.PresentationLayer\Controllers\OrderController.cs:line 39
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Store.PresentationLayer.Middlewares.ExceptionMiddleware.Invoke(HttpContext context) in C:\Users\Anuitex\source\repos\BookStore\Store.PresentationLayer\Middlewares\ExceptionMiddleware.cs:line 35 
+16.03.2021 15:48:43 Application started. Press Ctrl+C to shut down. 
+16.03.2021 15:48:43 Hosting environment: Development 
+16.03.2021 15:48:43 Content root path: C:\Users\Anuitex\Source\Repos\BookStore\Store.PresentationLayer 
+16.03.2021 15:48:44 REQUEST METHOD:  GET, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/ 
+16.03.2021 15:48:50 Exception -->   The SSL connection could not be established, see inner exception. 
+16.03.2021 15:48:50 Stack Trace -->      at Stripe.SystemNetHttpClient.MakeRequestAsync(StripeRequest request, CancellationToken cancellationToken)
+   at Stripe.StripeClient.RequestAsync[T](HttpMethod method, String path, BaseOptions options, RequestOptions requestOptions, CancellationToken cancellationToken)
+   at Stripe.Service`1.RequestAsync[T](HttpMethod method, String path, BaseOptions options, RequestOptions requestOptions, CancellationToken cancellationToken)
+   at Store.BusinessLogicLayer.Services.OrderService.PayAsync(PaymentModel model) in C:\Users\Anuitex\source\repos\BookStore\Store.BusinessLogicLayer\Services\OrderService.cs:line 142
+   at Store.PresentationLayer.Controllers.OrderController.BuyAsync(PaymentModel model) in C:\Users\Anuitex\source\repos\BookStore\Store.PresentationLayer\Controllers\OrderController.cs:line 39
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Store.PresentationLayer.Middlewares.ExceptionMiddleware.Invoke(HttpContext context) in C:\Users\Anuitex\source\repos\BookStore\Store.PresentationLayer\Middlewares\ExceptionMiddleware.cs:line 35 
+16.03.2021 15:50:21 Exception -->   The SSL connection could not be established, see inner exception. 
+16.03.2021 15:50:21 Stack Trace -->      at Stripe.SystemNetHttpClient.MakeRequestAsync(StripeRequest request, CancellationToken cancellationToken)
+   at Stripe.StripeClient.RequestAsync[T](HttpMethod method, String path, BaseOptions options, RequestOptions requestOptions, CancellationToken cancellationToken)
+   at Stripe.Service`1.RequestAsync[T](HttpMethod method, String path, BaseOptions options, RequestOptions requestOptions, CancellationToken cancellationToken)
+   at Store.BusinessLogicLayer.Services.OrderService.PayAsync(PaymentModel model) in C:\Users\Anuitex\source\repos\BookStore\Store.BusinessLogicLayer\Services\OrderService.cs:line 142
+   at Store.PresentationLayer.Controllers.OrderController.BuyAsync(PaymentModel model) in C:\Users\Anuitex\source\repos\BookStore\Store.PresentationLayer\Controllers\OrderController.cs:line 39
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Store.PresentationLayer.Middlewares.ExceptionMiddleware.Invoke(HttpContext context) in C:\Users\Anuitex\source\repos\BookStore\Store.PresentationLayer\Middlewares\ExceptionMiddleware.cs:line 35 
+16.03.2021 15:51:15 Application started. Press Ctrl+C to shut down. 
+16.03.2021 15:51:15 Hosting environment: Development 
+16.03.2021 15:51:15 Content root path: C:\Users\Anuitex\Source\Repos\BookStore\Store.PresentationLayer 
+16.03.2021 15:51:16 REQUEST METHOD:  GET, REQUEST BODY:  , REQUEST URL:  http://localhost:60397/ 
+16.03.2021 15:52:06 Application started. Press Ctrl+C to shut down. 
+16.03.2021 15:52:06 Hosting environment: Development 
+16.03.2021 15:52:06 Content root path: C:\Users\Anuitex\Source\Repos\BookStore\Store.PresentationLayer 
+16.03.2021 15:52:07 REQUEST METHOD:  GET, REQUEST BODY:  , REQUEST URL:  https://localhost:44373/ 
+16.03.2021 15:53:00 REQUEST METHOD:  POST, REQUEST BODY:  {
+   "CardNumber":"4242424242424242",
+   "Month":12,
+   "Year": 2022,
+   "CVC":"123",
+   "Value":110,
+   "Description":"1212",
+   "OrderId":2
+
+}, REQUEST URL:  https://localhost:44373/order/buyorder 
+16.03.2021 15:53:29 Application started. Press Ctrl+C to shut down. 
+16.03.2021 15:53:29 Hosting environment: Development 
+16.03.2021 15:53:29 Content root path: C:\Users\Anuitex\Source\Repos\BookStore\Store.PresentationLayer 
+16.03.2021 15:53:30 REQUEST METHOD:  GET, REQUEST BODY:  , REQUEST URL:  https://localhost:44373/ 
+16.03.2021 15:53:34 Exception -->   The SSL connection could not be established, see inner exception. 
+16.03.2021 15:53:34 Stack Trace -->      at Stripe.SystemNetHttpClient.MakeRequestAsync(StripeRequest request, CancellationToken cancellationToken)
+   at Stripe.StripeClient.RequestAsync[T](HttpMethod method, String path, BaseOptions options, RequestOptions requestOptions, CancellationToken cancellationToken)
+   at Stripe.Service`1.RequestAsync[T](HttpMethod method, String path, BaseOptions options, RequestOptions requestOptions, CancellationToken cancellationToken)
+   at Store.BusinessLogicLayer.Services.OrderService.PayAsync(PaymentModel model) in C:\Users\Anuitex\source\repos\BookStore\Store.BusinessLogicLayer\Services\OrderService.cs:line 142
+   at Store.PresentationLayer.Controllers.OrderController.BuyAsync(PaymentModel model) in C:\Users\Anuitex\source\repos\BookStore\Store.PresentationLayer\Controllers\OrderController.cs:line 39
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Store.PresentationLayer.Middlewares.ExceptionMiddleware.Invoke(HttpContext context) in C:\Users\Anuitex\source\repos\BookStore\Store.PresentationLayer\Middlewares\ExceptionMiddleware.cs:line 35 
+16.03.2021 17:10:16 Application started. Press Ctrl+C to shut down. 
+16.03.2021 17:10:16 Hosting environment: Development 
+16.03.2021 17:10:16 Content root path: C:\Users\Anuitex\Source\Repos\BookStore\Store.PresentationLayer 
+16.03.2021 17:10:17 REQUEST METHOD:  GET, REQUEST BODY:  , REQUEST URL:  https://localhost:44373/ 
+16.03.2021 17:10:57 REQUEST METHOD:  OPTIONS, REQUEST BODY:  , REQUEST URL:  https://localhost:44373/printingedition/getmaxpriceprintingedition 
+16.03.2021 17:10:57 REQUEST METHOD:  OPTIONS, REQUEST BODY:  , REQUEST URL:  https://localhost:44373/printingedition/getprintingeditions 
+16.03.2021 17:10:57 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  https://localhost:44373/printingedition/getmaxpriceprintingedition 
+16.03.2021 17:10:57 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  https://localhost:44373/printingedition/getprintingeditions 
+16.03.2021 17:11:06 REQUEST METHOD:  OPTIONS, REQUEST BODY:  , REQUEST URL:  https://localhost:44373/account/signin 
+16.03.2021 17:11:06 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  https://localhost:44373/account/signin 
+16.03.2021 17:11:06 REQUEST METHOD:  OPTIONS, REQUEST BODY:  , REQUEST URL:  https://localhost:44373/printingedition/getmaxpriceprintingedition 
+16.03.2021 17:11:06 REQUEST METHOD:  OPTIONS, REQUEST BODY:  , REQUEST URL:  https://localhost:44373/printingedition/getprintingeditions 
+16.03.2021 17:11:06 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  https://localhost:44373/printingedition/getmaxpriceprintingedition 
+16.03.2021 17:11:06 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  https://localhost:44373/printingedition/getprintingeditions 
+16.03.2021 17:18:03 Application started. Press Ctrl+C to shut down. 
+16.03.2021 17:18:03 Hosting environment: Development 
+16.03.2021 17:18:03 Content root path: C:\Users\Anuitex\Source\Repos\BookStore\Store.PresentationLayer 
+16.03.2021 17:18:03 REQUEST METHOD:  GET, REQUEST BODY:  , REQUEST URL:  https://localhost:44373/ 
+16.03.2021 17:18:54 Application started. Press Ctrl+C to shut down. 
+16.03.2021 17:18:54 Hosting environment: Development 
+16.03.2021 17:18:54 Content root path: C:\Users\Anuitex\Source\Repos\BookStore\Store.PresentationLayer 
+16.03.2021 17:18:54 REQUEST METHOD:  GET, REQUEST BODY:  , REQUEST URL:  https://localhost:44373/ 
+16.03.2021 17:19:19 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  https://localhost:44373/order/buyorder 
+16.03.2021 17:19:31 REQUEST METHOD:  OPTIONS, REQUEST BODY:  , REQUEST URL:  https://localhost:44373/printingedition/getmaxpriceprintingedition 
+16.03.2021 17:19:31 REQUEST METHOD:  OPTIONS, REQUEST BODY:  , REQUEST URL:  https://localhost:44373/printingedition/getprintingeditions 
+16.03.2021 17:19:31 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  https://localhost:44373/printingedition/getmaxpriceprintingedition 
+16.03.2021 17:19:32 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  https://localhost:44373/printingedition/getprintingeditions 
+16.03.2021 17:19:33 REQUEST METHOD:  OPTIONS, REQUEST BODY:  , REQUEST URL:  https://localhost:44373/order/getorders 
+16.03.2021 17:19:33 REQUEST METHOD:  POST, REQUEST BODY:  , REQUEST URL:  https://localhost:44373/order/getorders 

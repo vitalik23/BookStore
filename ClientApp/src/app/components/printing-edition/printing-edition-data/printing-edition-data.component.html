@@ -1,0 +1,41 @@
+<div class="container">
+    <div>
+        <label class="labelCatalog">Catalog</label>
+    </div>
+
+    <div class="topInfo">
+        <div class="leftInfo">
+            <div class="img">
+                <img src="/assets/book.png" class="imgBook" />
+            </div>
+            <div class="infoByPrinting">
+                <label class="title">
+                    {{printingEdition?.title}}
+                </label>
+                <ul *ngFor="let pe of printingEdition?.authorInPrintingEdition" class="authorName">
+                    <li>by {{pe.author?.name}} (Author)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="rightInfo">
+            <div class="count">
+                <label class="quantity">Quantity: </label>
+                <input [(ngModel)]="quantity" class="inputCount" />
+            </div>
+            <div class="price">
+                <label class="pricePrinting">
+                    {{printingEdition?.currency | currency}} {{printingEdition?.price}}
+                </label>
+            </div>
+            <div class="toCart">
+                <button class="addToCart" (click)="addToCart(printingEdition)">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="description">
+        {{(printingEdition)?.description}}
+    </div>
+
+</div>

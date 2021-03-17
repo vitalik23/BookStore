@@ -1,0 +1,15 @@
+C:\Users\Anuitex\Source\Repos\BookStore\Store.DataAccessLayer\bin\Debug\net5.0\Store.DataAccessLayer.deps.json
+C:\Users\Anuitex\Source\Repos\BookStore\Store.DataAccessLayer\bin\Debug\net5.0\Store.DataAccessLayer.dll
+C:\Users\Anuitex\Source\Repos\BookStore\Store.DataAccessLayer\bin\Debug\net5.0\ref\Store.DataAccessLayer.dll
+C:\Users\Anuitex\Source\Repos\BookStore\Store.DataAccessLayer\bin\Debug\net5.0\Store.DataAccessLayer.pdb
+C:\Users\Anuitex\Source\Repos\BookStore\Store.DataAccessLayer\bin\Debug\net5.0\Store.Shared.dll
+C:\Users\Anuitex\Source\Repos\BookStore\Store.DataAccessLayer\bin\Debug\net5.0\Store.Shared.pdb
+C:\Users\Anuitex\Source\Repos\BookStore\Store.DataAccessLayer\obj\Debug\net5.0\Store.DataAccessLayer.csprojAssemblyReference.cache
+C:\Users\Anuitex\Source\Repos\BookStore\Store.DataAccessLayer\obj\Debug\net5.0\Store.DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Anuitex\Source\Repos\BookStore\Store.DataAccessLayer\obj\Debug\net5.0\Store.DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\Anuitex\Source\Repos\BookStore\Store.DataAccessLayer\obj\Debug\net5.0\Store.DataAccessLayer.AssemblyInfo.cs
+C:\Users\Anuitex\Source\Repos\BookStore\Store.DataAccessLayer\obj\Debug\net5.0\Store.DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Anuitex\Source\Repos\BookStore\Store.DataAccessLayer\obj\Debug\net5.0\Store.DataAccessLayer.csproj.CopyComplete
+C:\Users\Anuitex\Source\Repos\BookStore\Store.DataAccessLayer\obj\Debug\net5.0\Store.DataAccessLayer.dll
+C:\Users\Anuitex\Source\Repos\BookStore\Store.DataAccessLayer\obj\Debug\net5.0\ref\Store.DataAccessLayer.dll
+C:\Users\Anuitex\Source\Repos\BookStore\Store.DataAccessLayer\obj\Debug\net5.0\Store.DataAccessLayer.pdb

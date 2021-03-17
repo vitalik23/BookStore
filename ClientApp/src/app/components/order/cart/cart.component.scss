@@ -1,0 +1,106 @@
+.table{
+    border: 2px solid black;
+    width: 100%;
+}
+
+td, th{
+    border-right: 2px solid black;
+    height: 5%;
+    font-family: cursive;
+}
+
+th{
+    
+    color: black;
+    font-size: 14px;
+}
+
+tr:nth-child(even){
+    background: white;
+    
+}
+
+tr:nth-child(odd){
+    background: rgb(226, 226, 226);
+}
+
+.imgDelete{
+    width: 20px;
+    height: 20px;
+    transition: 0.2s;
+    margin-left: 10px;
+}
+
+.imgDelete:hover{
+    transform: scale(1.1);
+}
+
+
+.mat-column-product{
+    width: 30%;
+}
+
+.mat-column-price{
+    width: 20%;
+}
+
+.mat-column-count{
+    width: 10%;
+}
+
+.mat-column-orderAmount{
+    width: 30%;
+}
+
+.mat-column-delete{
+    width: 10%;
+}
+
+.cancel{
+    float: left;
+}
+
+.buttonCancel{
+    width: 238px;
+    font-family: cursive;
+    box-shadow: 2px 2px 0px 0px;
+}
+
+.buttonBuyNow{
+    width: 239px;
+    background: lightgreen;
+    font-family: cursive;
+    box-shadow: 2px 2px 0px 0px;
+}
+
+.totalPrice{
+    font-family: cursive;
+    font-weight: 550;
+    padding-left: 300px;
+}
+
+.labelTotalPrice{
+    color: green;
+}
+
+.imgOk{
+    width: 80px;
+    height: 80px;
+    margin-left: 200px;
+    margin-bottom: 30px;
+}
+
+.labelThank{
+    font-family: cursive;
+    font-size: 16px;
+    padding-left: 140px;
+}
+
+.buttonContinue{
+    width: 100px;
+    font-family: cursive;
+    box-shadow: 2px 2px 0px 0px;
+    background: lightgreen;
+    margin-left: 180px;
+    margin-top: 20px;
+}

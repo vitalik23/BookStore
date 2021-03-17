@@ -1,0 +1,99 @@
+<div class="container">
+
+    <div *ngIf="!(successMessage$ | async)">
+        <div class="registerAlign">
+            <img class="registerUserImg" src="/assets/user.png" />
+        </div>
+
+        <div class="registerFormAlign">
+
+            <div *ngIf="(errorMessage$ | async)">
+                <div class="alert alert-danger" role="alert">
+                    {{errorMessage$ | async}}
+                </div>
+            </div>
+
+            <p class="registerCreateText">Create account</p>
+
+            <form [formGroup]="registerForm" novalide (ngSubmit)="signup()">
+                <div>
+                    <label class="registerInputName">FirstName</label>
+                    <p>
+                        <input class="registerInput" name="FirstName" formControlName="firstName" required
+                            placeholder="First Name" />
+                    </p>
+                    <div class="alert-danger"
+                        *ngIf="registerForm.controls['firstName'].invalid && registerForm.controls['firstName'].touched">
+                        Please enter Your First name
+                    </div>
+                </div>
+                <div>
+                    <label class="registerInputName">LastName</label>
+                    <p>
+                        <input class="registerInput" name="LastName" formControlName="lastName" required
+                            placeholder="Last Name" />
+                    </p>
+                    <div class="alert-danger"
+                        *ngIf="registerForm.controls['lastName'].invalid && registerForm.controls['lastName'].touched">
+                        Please enter Your Last name
+                    </div>
+                </div>
+                <div>
+                    <label class="registerInputName">E-mail</label>
+                    <p>
+                        <input class="registerInput" name="Email" formControlName="email" required
+                            placeholder="E-mail" />
+                    </p>
+                    <div class="alert-danger"
+                        *ngIf="registerForm.controls['email'].invalid && registerForm.controls['email'].touched">
+                        Please enter a valid email address
+                    </div>
+                </div>
+                <div>
+                    <label class="registerInputName">Password</label>
+                    <p>
+                        <input class="registerInput" name="Password" formControlName="password" required
+                            placeholder="At least 6 characters" />
+                    </p>
+                    <div class="alert-danger"
+                        *ngIf="registerForm.controls['password'].invalid && registerForm.controls['password'].touched">
+                        Password must be at least 6 characters
+                    </div>
+                </div>
+                <div>
+                    <label class="registerInputName">Confirm password</label>
+                    <p>
+                        <input class="registerInput" name="PasswordConfirm" formControlName="passwordConfirm" required
+                            placeholder="Pasword should be the same"
+                            data-match="registerForm.controls['passwordConfirm']" />
+                    </p>
+
+                    <mat-error class="alert-danger" *ngIf="registerForm.hasError('notSame')">
+                        Passwords must be equal
+                    </mat-error>
+
+                </div>
+
+                <button class="registerButton">Sing Up your account</button>
+            </form>
+
+            <div>
+                <label class="registerHaveAccount">Already have an account? </label>
+                <a class="registerSignIn" routerLink="/account/login">Sign-In</a>
+            </div>
+
+        </div>
+    </div>
+
+    <div *ngIf="(successMessage$ | async)">
+        <h2 class="confirmedText">Confirm your email address</h2>
+
+        <div class="confirmedAlign">
+
+            <p class="confirmedTextMessage">
+                {{successMessage$ | async}}
+            </p>
+
+        </div>
+    </div>
+</div>

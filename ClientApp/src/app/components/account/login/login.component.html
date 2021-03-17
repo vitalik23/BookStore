@@ -1,0 +1,53 @@
+<div class="container">
+
+
+
+  <div class="loginAlign">
+    <img class="loginUserImg" src="/assets/user.png" />
+  </div>
+
+  <div class="loginAlignForm">
+    <div *ngIf="(errorMessage$ | async)">
+      <div class="alert alert-danger" role="alert">
+        {{errorMessage$|async}}
+      </div>
+    </div>
+
+    <p class="loginSignIn">Sign-In</p>
+
+    <form [formGroup]="loginForm" novalidate (ngSubmit)="signin()">
+      <div>
+        <label class="loginText">E-mail</label>
+        <p>
+          <input class="loginInputText" name="Email" formControlName="email" required />
+        </p>
+        <div class="alert-danger" *ngIf="loginForm.controls['email'].invalid && loginForm.controls['email'].touched">
+          Invalid email
+        </div>
+      </div>
+
+      <div>
+        <label class="loginText">Password</label>
+        <a class="loginForgotPassword" routerLink="/account/forgot-password">Forgot your password?</a>
+        <p>
+          <input class="loginInputText" name="Password" formControlName="password" type="password" required />
+        </p>
+        <div class="alert-danger"
+          *ngIf="loginForm.controls['password'].invalid && loginForm.controls['password'].touched">
+          Invalid password
+        </div>
+      </div>
+
+      <div class="loginRemember">
+        <input class="loginCheckbox" type="checkbox" formControlName="rememberMe" />Remember Me
+        <button class="loginButtonLogin">Sing-In</button>
+      </div>
+    </form>
+
+    <div>
+      <p class="loginTextAsk">Don't have an account ?</p>
+      <a class="loginRegister" routerLink="/account/register"><button class="loginRegisterButton">Sign-Up</button></a>
+    </div>
+
+  </div>
+</div>

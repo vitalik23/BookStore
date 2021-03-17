@@ -1,0 +1,124 @@
+<div class="printingEditionAddCircle" data-title="Add new Printing Edition">
+    <a class="authorLinkAddAuthor" (click)="addPrintingEdition()">
+        <img class="buttonImg" src="/assets/add.png" />
+    </a>
+</div>
+
+<div class="container">
+
+    <label class="labelProductManagment">Product managment</label>
+
+    <table mat-table [dataSource]="printingEditions | paginate: { id:'list_pagination',
+                                                                    itemsPerPage: pageSize, 
+                                                                    currentPage: pageNumber,
+                                                                    totalItems: totalItems }">
+
+        <ng-container matColumnDef="id">
+            <th class="list" mat-header-cell *matHeaderCellDef>ID<img class="buttonImg"
+                    src="/assets/sort.png" mat-button (click)="sorting('Id')" /></th>
+            <td mat-cell *matCellDef="let printingEdition">{{printingEdition.id}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="title">
+            <th class="list" mat-header-cell *matHeaderCellDef>
+                Name
+                <img class="buttonImg" src="/assets/menu.png" mat-button [matMenuTriggerFor]="menu" />
+                <mat-menu #menu="matMenu">
+                    <input class="inputSearch" type="text" mat-menu-item [(ngModel)]="printingEditionTitle"
+                        (ngModelChange)="printingEditionFilter()" placeholder="search" />
+                </mat-menu>
+            </th>
+            <td mat-cell *matCellDef="let printingEdition">{{printingEdition.title}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="description">
+            <th class="list" mat-header-cell *matHeaderCellDef>Description</th>
+            <td mat-cell *matCellDef="let printingEdition">{{printingEdition.description | formatString:90}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="category">
+            <th class="list" mat-header-cell *matHeaderCellDef>
+                Category
+                <img class="buttonImg" src="/assets/menu.png" mat-button [matMenuTriggerFor]="menu" />
+                <mat-menu #menu="matMenu">
+                    <mat-card [formGroup]="checkboxForm">
+                        <div class="divInline">
+                            <div class="labelBook">
+                                <label>Book</label>
+                            </div>
+                            <div class="checkboxBook">
+                                <input type="checkbox" formControlName="book" mat-menu-item
+                                    (ngModelChange)="checkFilterBook()" />
+                            </div>
+                        </div>
+                        <div>
+                            <div class="labelJournal">
+                                <label>Journal</label>
+                            </div>
+                            <div class="checkboxJournal">
+                                <input type="checkbox" formControlName="journal" mat-menu-item
+                                    (ngModelChange)="checkFilterJournal()" />
+                            </div>
+                        </div>
+                        <div>
+                            <div class="labelNewspaper">
+                                <label>Newspaper</label>
+                            </div>
+                            <div class="checkboxNewsPaper">
+                                <input type="checkbox" formControlName="newspaper" mat-menu-item
+                                    (ngModelChange)="checkFilterNewsPaper()" />
+                            </div>
+                        </div>
+                    </mat-card>
+                </mat-menu>
+            </th>
+            <td mat-cell *matCellDef="let printingEdition">{{printingEdition.type | enum}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="author">
+            <th class="list" mat-header-cell *matHeaderCellDef>
+                Author
+                <img class="buttonImg" src="/assets/menu.png" mat-button [matMenuTriggerFor]="menu" />
+                <mat-menu #menu="matMenu">
+                    <input class="inputSearch" type="text" mat-menu-item [(ngModel)]="authorName"
+                        (ngModelChange)="printingEditionFilter()" placeholder="search" />
+                </mat-menu>
+            </th>
+            <td mat-cell *matCellDef="let printingEdition">
+                <ul>
+                    <li *ngFor="let printingEdition of printingEdition.authorInPrintingEdition">
+                        {{printingEdition.author.name}}
+                    </li>
+                </ul>
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="price">
+            <th class="list" mat-header-cell *matHeaderCellDef>Price<img class="buttonImg"
+                    src="/assets/sort.png" mat-button (click)="sorting('Price')" /></th>
+            <td mat-cell *matCellDef="let printingEdition"> {{printingEdition.currency | currency}}
+                {{printingEdition.price}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="edit">
+            <th class="list" mat-header-cell *matHeaderCellDef></th>
+            <td mat-cell *matCellDef="let printingEdition">
+                <a class="listEditButton" [routerLink]="['/admin/update-printing-edition', printingEdition.id]"><img
+                        class="listEditImg" src="/assets/edit.png" /></a>
+                <a class="listDeleteButton" (click)="delete(printingEdition.id)"><img class="listDeleteImg"
+                        src="/assets/delete.png" /></a>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="['id', 'title', 'description', 'category', 'author', 'price', 'edit']">
+        </tr>
+        <tr mat-row
+            *matRowDef="let row; columns: ['id', 'title', 'description', 'category', 'author', 'price', 'edit']"></tr>
+    </table>
+
+    <div class="pagination">
+        <pagination-controls id="list_pagination" maxSize="6" directionLinks="true" (pageChange)="pagedChanged($event)">
+        </pagination-controls>
+    </div>
+
+</div>

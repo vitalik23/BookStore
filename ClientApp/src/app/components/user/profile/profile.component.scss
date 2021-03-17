@@ -1,0 +1,62 @@
+.profileUserImg{
+    width: 100px;
+    height: 100px;
+
+}
+
+.myProfile{
+    font-family: cursive;
+    font-size: 18px;
+    font-weight: 600;
+    padding-top: 30px;
+}
+
+.profileEditImg{
+    padding-left: 270px;
+    transition: 0.2s;
+}
+
+.profileEditImg :hover{
+    transform: scale(1.2);
+}
+
+.outputData{
+    width: 400px;
+}
+
+.profileLabel{
+    font-family: cursive;
+    font-size: 14px;
+}
+
+input::placeholder{
+    font-family: cursive;
+    color:black;
+}
+
+.profileButtonSave{
+    float: left;
+    margin-right: 20px;
+    width: 75px;
+    box-shadow: 5px 5px;
+}
+
+.profileButtonCancel{
+    width: 75px;
+    box-shadow: 5px 5px;
+}
+
+.profileEditImg:hover::after{
+    content: attr(data-title); 
+    left: 24%; 
+    top: 17%;
+    z-index: 1;
+    position: absolute;
+    background: white;
+    font-family: cursive; 
+    font-size: 14px; 
+    padding: 5px 10px;
+    border: 1px solid #333;
+    border-radius: 10px 0px 10px 10px;
+    color:black;
+}

@@ -1,0 +1,22 @@
+
+<div>
+
+    <div class="container">
+        <div class="paddingOfTop">
+
+            <label class="authorLabelUpdate">
+                Update Author
+                <img class="buttonImg" src="/assets/edit.png" />
+            </label>
+        </div>
+        <form [formGroup]="updateAuthorForm" novalide (ngSubmit)="updateAuthor()">
+            <div>
+                <label class="authorLabelName">Name</label>
+                <p>
+                    <input class="authorInputName" formControlName="name" required />
+                </p>
+            </div>
+            <button class="authorButtonUpdate">Update</button>
+        </form>
+    </div>
+</div>
