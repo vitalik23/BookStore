@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UT/UIUMCm3a+lFFlqr1cF+Nt+svSaFCn5IT0EvK5TMAIRQEPw2t8JtFJX0Uzf/3fgUF2U95B1LcGb1PF5+mEJg==",
+  "dgSpecHash": "KhGNXtm9bfRGtlPnCaP/DnY6MR0ldq91QXSjMMgJuW7emIO6H60venz4rey38JDHL3e21T7QxkqtM8w22ltEMQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Anuitex\\source\\repos\\BookStore\\Store.BusinessLogicLayer\\Store.BusinessLogicLayer.csproj",
+  "projectFilePath": "C:\\Projects\\BookStore\\Store.BusinessLogicLayer\\Store.BusinessLogicLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Anuitex\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\Anuitex\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.0\\automapper.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512",

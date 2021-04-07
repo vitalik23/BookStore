@@ -5,6 +5,7 @@ import { OrderService } from "../../../../service/order.service";
 import * as createOrderAction from '../actions/create-order.action';
 import { Constants } from "src/app/constants/constants";
 import { OrderItemModel } from "../../models/order-item.model";
+import * as alertify from 'alertifyjs';
 
 @Injectable()
 export class CreateOrderEffect{
@@ -30,7 +31,7 @@ export class CreateOrderEffect{
         ofType<createOrderAction.CreateOrderSuccess>(createOrderAction.CreateOrderEnum.CreateOrderSuccess),
         map(() => {
             localStorage.removeItem(Constants.CART);
-            alert(Constants.SUCCESSFULY_COMPLITED_ORDER);
+            alertify.success(Constants.SUCCESSFULY_COMPLITED_ORDER);
             window.location.href = Constants.ROUTE_MAIN_PAGE;
         })
     )

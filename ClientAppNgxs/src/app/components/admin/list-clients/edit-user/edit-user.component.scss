@@ -1,0 +1,51 @@
+.adminInputSize{
+    width: 400px;
+}
+
+.adminImg{
+    width: 70px;
+    height: 70px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.adminEditImg{
+    width: 30px;
+    height: 30px;
+    margin-bottom: 40px;
+}
+
+.adminTitle{
+    text-align: center;
+    font-family: cursive;
+    font-weight: 550;
+    font-size: 20px;
+}
+
+.adminText{
+    font-family: cursive;
+    font-weight: 500;
+}
+
+.adminDivButtonCancel{
+    display: inline;
+    float: left;
+}
+
+.adminDivButtonSave{
+    float:right;
+}
+
+.adminSave{
+    width: 70px;
+    margin-right: 50px;
+    background: white;
+    box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.938);
+}
+
+.adminCancel{
+    width: 70px;
+    margin-left: 50px;
+    box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.938);
+}
+

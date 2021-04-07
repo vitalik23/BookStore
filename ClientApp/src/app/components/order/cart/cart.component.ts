@@ -6,6 +6,7 @@ import { AppState } from 'src/app/store/state/app-state.state';
 import { OrderItemModel } from '../models/order-item.model';
 import { CartService } from '../../../service/cart.service';
 import { CreateOrder } from '../store/actions/create-order.action';
+import * as alertify from 'alertifyjs';
 
 @Component({
   selector: 'app-cart',
@@ -48,7 +49,7 @@ export class CartComponent implements OnInit {
   createOrder(product: OrderItemModel[]) {
     
     if(product == null || product.length < Constants.COUNT_ELEMENT_IN_ARRAY){
-      return alert(Constants.EMPTY_ORDER);
+      return alertify.warning(Constants.EMPTY_ORDER);
     }
 
     this.store$.dispatch(new CreateOrder(product));

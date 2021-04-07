@@ -31,9 +31,8 @@ namespace Store.PresentationLayer.Controllers
         [Route(Constants.Routes.UPDATE_USER)]
         public async Task<IActionResult> UpdateUserAsync(UserModel model)
         {
-            await _userService.UpdateUserAsync(model);
-            return Ok();
+            var user = await _userService.UpdateUserAsync(model);
+            return Ok(user);
         }
-
     }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mFhOaTpgbFLLEbMWftrk+U7TMQkHauk7ybfPG3C01x+DfN5fc1x96xMS6YfVHYYyeRzT3AYUfoWAIgzNQp6vPQ==",
+  "dgSpecHash": "n3Qi6BoZR4cR7+nojkK1tvSQFoe5ye6YVmhzPfF7o7JmpM9ek7N6ndT+Fpn8N/fppED2NF+mv//cfkt42Ddgig==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Anuitex\\source\\repos\\BookStore\\Store.Shared\\Store.Shared.csproj",
+  "projectFilePath": "C:\\Projects\\BookStore\\Store.Shared\\Store.Shared.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Anuitex\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Anuitex\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",

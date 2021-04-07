@@ -3,6 +3,8 @@ import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { Constants } from 'src/app/constants/constants';
+import { isSpinnerShow } from 'src/app/store/selectors/spinner.selector';
+import { ProgressBarComponent } from '../../progress-bar/progress-bar.component';
 import { CreateAuthorComponent } from '../create-author/create-author.component';
 import { AuthorFilter } from '../models/author-filter.model';
 import { AuthorModel } from '../models/author.model';
@@ -46,13 +48,20 @@ export class GetAuthorsComponent implements OnInit {
 
   ngOnInit(): void {
 
+    this.store$.pipe(select(isSpinnerShow)).subscribe(
+      data => {
+        if(data){
+          return this.openDialog();
+        }
+        this.closeDialog();
+      }
+    );
+
     this.store$.pipe(select(selectAuthorModel)).subscribe(
       data => {
         this.authors = data;
       }
     )
-
-    
 
     this.store$.pipe(select(getPageNumber)).subscribe(
       data => {
@@ -84,6 +93,15 @@ export class GetAuthorsComponent implements OnInit {
     );
 
   }
+
+  openDialog(){
+    this.matDialog.open(ProgressBarComponent);
+  }
+
+  closeDialog(){
+    this.matDialog.closeAll();
+  }
+
 
   authorFilter(){
     this.checkAuthorName();

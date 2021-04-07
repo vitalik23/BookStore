@@ -4021,11 +4021,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Anuitex\\Source\\Repos\\BookStore\\Store.Shared\\Store.Shared.csproj",
+      "projectUniqueName": "C:\\Projects\\BookStore\\Store.Shared\\Store.Shared.csproj",
       "projectName": "Store.Shared",
-      "projectPath": "C:\\Users\\Anuitex\\Source\\Repos\\BookStore\\Store.Shared\\Store.Shared.csproj",
+      "projectPath": "C:\\Projects\\BookStore\\Store.Shared\\Store.Shared.csproj",
       "packagesPath": "C:\\Users\\Anuitex\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Anuitex\\Source\\Repos\\BookStore\\Store.Shared\\obj\\",
+      "outputPath": "C:\\Projects\\BookStore\\Store.Shared\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Anuitex\\AppData\\Roaming\\NuGet\\NuGet.Config",

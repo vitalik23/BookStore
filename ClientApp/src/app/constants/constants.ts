@@ -32,6 +32,7 @@ export class Constants{
     public static INTERNAL_SERVER_ERROR = "Internal server error! Please, try later!";
     public static SUCCESSFULY_COMPLITED_ORDER = "You have successfully completed your order";
     public static CART = 'cart';
+    public static PLEASE_ENTER_OLD_PASSWORD = 'Please current old password';
 
     public static SORT_BY_ID = "Id";
     public static SORT_BY_PRICE = "Price";
@@ -65,6 +66,7 @@ export class Constants{
     public static FORM_YEAR = 'year'; 
     public static FORM_MINPRICE = 'minPrice';
     public static FORM_MAXPRICE = 'maxPrice';
+    public static FORM_CURRENT_PASSWORD = 'currentPassword';
 
     public static STYLE_WIDTH = '350px';
     public static STYLE_WIDTH_WINDOW = '550px';

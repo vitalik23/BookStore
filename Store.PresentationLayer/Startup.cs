@@ -9,12 +9,12 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Store.DataAccessLayer.Entities;
 using Store.PresentationLayer.Extensions;
+using Store.PresentationLayer.Middlewares;
 using Store.Shared.Common.Logger;
 using Store.Shared.Constants;
 using Store.Shared.Options;
 using System;
 using System.IO;
-using System.Net;
 using System.Reflection;
 using System.Text;
 
@@ -26,7 +26,6 @@ namespace Store.PresentationLayer
         {
             Configuration = configuration;
         }
-
         public IConfiguration Configuration { get; }
 
         public void ConfigureServices(IServiceCollection services)
@@ -45,6 +44,9 @@ namespace Store.PresentationLayer
                 .AddDefaultTokenProviders();
 
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddCookie(IdentityConstants.ApplicationScheme)
+                .AddCookie(IdentityConstants.ExternalScheme)
+                .AddCookie(IdentityConstants.TwoFactorUserIdScheme)
                 .AddJwtBearer(options =>
                 {
                     options.RequireHttpsMetadata = false;
@@ -62,18 +64,7 @@ namespace Store.PresentationLayer
                 });
 
 
-            services.AddCors(options =>
-            {
-                options.AddDefaultPolicy(
-                    builder =>
-                    {
-                        builder.AllowAnyOrigin()
-                        .AllowAnyMethod()
-                        .AllowAnyHeader()
-                        .AllowCredentials()
-                        .WithOrigins(Configuration["clientConfig:Localhost"]);
-                    });
-            });
+            services.AddCors();
 
             services.AddControllers().AddNewtonsoftJson(options =>
                 options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
@@ -117,8 +108,7 @@ namespace Store.PresentationLayer
                 options.IncludeXmlComments(filePath);
             });
 
-
-
+            services.AddRazorPages();
 
         }
 
@@ -129,18 +119,28 @@ namespace Store.PresentationLayer
             loggerFactory.AddFile(Path.Combine(Directory.GetCurrentDirectory(), Constants.Logger.LOGGER_TXT));
             var logger = loggerFactory.CreateLogger(Constants.Logger.FILE_LOGGER);
 
-            app.UseDefaultFiles();
+            app.UseMiddleware<TokenMiddleware>();
 
-            app.UseCors();
+            app.UseDefaultFiles();
 
             app.UseRouting();
             app.UseStaticFiles();
+
+            app.UseCors(builder => 
+            {
+                builder.AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader();
+            });
 
             app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
+
+                endpoints.MapRazorPages();
+
                 endpoints.MapControllers();
             });
 

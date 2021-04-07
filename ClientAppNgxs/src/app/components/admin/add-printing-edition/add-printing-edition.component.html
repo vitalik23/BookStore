@@ -1,0 +1,68 @@
+
+
+<div class="container">
+    <div class="lableAddNewProduct">
+        <label class="">Add new Product</label>
+    </div>
+    <form [formGroup]="addPrintingEditionForm" novalide (ngSubmit)="addPrintingEdition()">
+
+        <div class="divLeft">
+            <div>
+                <label class="labelTitle">Title</label>
+                <textarea class="printingEditionInputTitle" formControlName="title" required maxlength="100"></textarea>
+            </div>
+            <div>
+                <label class="labelDescription">Description</label>
+                <textarea class="printingEditionInputDescription" formControlName="description" required
+                    maxlength="1000"></textarea>
+            </div>
+        </div>
+
+        <div class="divRight">
+            <div class="bookImg">
+                <img class="imgBook" src="/assets/book.png" />
+            </div>
+
+            <div class="category">
+                <label class="labelCategory">Category</label>
+                <mat-form-field>
+                    <mat-label class="">Book</mat-label>
+                    <mat-select formControlName="type">
+                        <mat-option *ngFor="let type of keysPrinting" [value]="type">
+                            {{printingType[type]}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+
+            <div class="author">
+                <label class="labelAuthor">Author</label>
+                <mat-form-field>
+                    <mat-label class="">Author</mat-label>
+                    <mat-select formControlName="authors" multiple>
+                        <mat-option *ngFor="let author of authors$ | async" [value]="author.id">
+                            {{author.name}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+
+            <div class="price">
+                <label class="labelPrice">Price</label>
+                <input class="priceInput" formControlName="price" required placeholder="0.00" />
+            </div>
+
+            <div class="currency">
+                <label class="labelCurrency">Currency</label>
+                <label class="labelCurrencyType">USD</label>
+            </div>
+
+            <button class="printingEditionButtonUpdate">Create</button>
+        </div>
+    </form>
+
+    <div class="cancel">
+        <button class="" (click)="cancel()">Cancel</button>
+    </div>
+
+</div>

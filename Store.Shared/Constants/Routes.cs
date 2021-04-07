@@ -14,8 +14,9 @@ namespace Store.Shared.Constants
             public const string FORGOT_PASSWORD = "forgotpassword";
             public const string CONFIRM_EMAIL = "confirmemail";
             public const string UPDATE_TOKENS = "updatetokens";
+            public const string GET_ROLE = "getrole";
 
-            
+
             public const string ADMIN = "admin";
             public const string DELETE_USER = "delete";
             public const string GET_USERS = "getusers";

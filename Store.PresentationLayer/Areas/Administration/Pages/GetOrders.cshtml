@@ -1,0 +1,73 @@
+﻿@page
+@model Store.PresentationLayer.Areas.Administration.Pages.GetOrdersModel
+@{
+}
+
+<div>
+    <div>
+        <form method="post" name="filtering">
+            <input type="hidden" asp-for="OrderFilterAndPaginationModel.PaginationFilterModels.PageNumber" />
+            <input type="hidden" asp-for="OrderFilterAndPaginationModel.PaginationFilterModels.PageSize" />
+        </form>
+    </div>
+    <div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Date</th>
+                    <th>User name</th>
+                    <th>User Email</th>
+                    <th>Product</th>
+                    <th>Title</th>
+                    <th>Order amount</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var orders in Model.PagedPesponse.Data)
+                {
+                    <tr>
+                        <td>@orders.Id</td>
+                        <td>@orders.CreateDate</td>
+                        <td>@orders.User.FirstName @orders.User.LastName</td>
+                        <td>@orders.User.Email</td>
+                        <td>
+                            @foreach (var products in orders.OrderItems)
+                            {
+                                <p>@products.PrintingEdition.Type</p>
+                            }
+                        </td>
+                        <td>
+                            @foreach (var products in orders.OrderItems)
+                            {
+                                <p>@products.PrintingEdition.Title</p>
+                            }
+                        </td>
+                        <td>@orders.TotalAmount</td>
+                        <td>@orders.Status</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div>
+
+        <form method="post">
+            <input type="hidden" asp-for="OrderFilterAndPaginationModel.OrderFilterModels.SortBy" />
+            <input type="hidden" asp-for="OrderFilterAndPaginationModel.PaginationFilterModels.PageNumber" />
+
+            <input type="hidden" name="previousPage" value="1" />
+            <input type="submit" value="<previous" />
+        </form>
+
+        <form method="post">
+            <input type="hidden" asp-for="OrderFilterAndPaginationModel.OrderFilterModels.SortBy" />
+            <input type="hidden" asp-for="OrderFilterAndPaginationModel.PaginationFilterModels.PageNumber" />
+
+            <input type="hidden" name="nextPage" value="1" />
+            <input type="submit" value="next>" />
+        </form>
+    </div>
+</div>
+

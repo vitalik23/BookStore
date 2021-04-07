@@ -1,12 +1,13 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { Store } from '@ngrx/store';
+import { ActionsSubject, Store } from '@ngrx/store';
 import { Constants } from 'src/app/constants/constants';
 import { AppState } from 'src/app/store/state/app-state.state';
 import { OrderItemModel } from '../models/order-item.model';
 import { PaymentModel } from '../models/payment.model';
-import { CreatePay } from '../store/actions/create-pay.action';
+import * as actions from '../store/actions/create-pay.action';
+import { ofType } from '@ngrx/effects';
 
 @Component({
   selector: 'app-payment',
@@ -24,8 +25,17 @@ export class PaymentComponent implements OnInit {
   constructor(
     public dialogRef: MatDialogRef<PaymentComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
-    private store$: Store<AppState>
+    private store$: Store<AppState>,
+    actionsSubject: ActionsSubject,
   ) {
+
+    actionsSubject.pipe(
+      ofType(actions.CreatePayEnum.CreatePaySuccess))
+      .subscribe(_ => {
+       this.windowSuccess = true;
+      }
+    );
+
     this.payForm = new FormGroup({
       "description": new FormControl(""),
       "cardnumber": new FormControl(""),
@@ -50,10 +60,7 @@ export class PaymentComponent implements OnInit {
       orderId: this.orderItem.id
     };
 
-    this.store$.dispatch(new CreatePay(form));
-
-    this.windowSuccess = true;
-
+    this.store$.dispatch(new actions.CreatePay(form));
   }
 
   cancel() {
@@ -65,3 +72,4 @@ export class PaymentComponent implements OnInit {
   }
 
 }
+

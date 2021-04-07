@@ -1,0 +1,56 @@
+﻿@page
+@model Store.PresentationLayer.Areas.Administration.Pages.AddPrintingEditionModel
+@using static Store.Shared.Enums.Enums
+@{
+}
+
+
+<form method="post">
+    <div>
+        <label>Title</label>
+        <div>
+            <textarea asp-for="PrintingEditionModel.Title"></textarea>
+        </div>
+    </div>
+    <div>
+        <label>Description</label>
+        <div>
+            <textarea asp-for="PrintingEditionModel.Description"></textarea>
+        </div>
+    </div>
+    <div>
+        <label>Price</label>
+        <div>
+            <input asp-for="PrintingEditionModel.Price" placeholder="0.00" />
+        </div>
+    </div>
+    <div>
+        <label>Currency</label>
+        <div>
+            <input asp-for="PrintingEditionModel.Currency" placeholder="USD" disabled/>
+            <input type="hidden" asp-for="PrintingEditionModel.Currency" value="1"/>
+        </div>
+    </div>
+    <div>
+        <label>Category</label>
+        <div>
+            <select asp-for="PrintingEditionModel.Type" asp-items="Html.GetEnumSelectList<PrintingType>()">
+            </select>
+        </div>
+    </div>
+    <div>
+        <label>Author</label>
+        <div>
+            <select multiple name="PrintingEditionModel.AuthorsId">
+                @foreach (var authors in Model.Authors)
+                {
+                    <option value="@authors.Id">@authors.Name</option>
+                }
+            </select>
+        </div>
+    </div>
+
+    <div>
+        <input type="submit" value="Save" />
+    </div>
+</form>

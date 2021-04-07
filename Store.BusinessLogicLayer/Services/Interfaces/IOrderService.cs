@@ -10,9 +10,9 @@ namespace Store.BusinessLogicLayer.Services.Interfaces
 {
     public interface IOrderService
     {
-        public Task PayAsync(PaymentModel model);
+        public Task<OrderModel> PayAsync(PaymentModel model);
         public Task<PagedResponse<OrderModel>> GetFilteredOrderItemsAsync(OrderFilterModel model, PaginationFilterModel pagination);
-        public Task CreateOrderAsync(List<CreateOrderItemModel> model);
+        public Task<OrderModel> CreateOrderAsync(List<CreateOrderItemModel> model);
         public Task<PagedResponse<OrderModel>> GetUserOrdersAsync(PaginationFilterModel pagination);
     }
 }

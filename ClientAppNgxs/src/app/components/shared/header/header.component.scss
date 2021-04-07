@@ -1,0 +1,59 @@
+.appHeader{
+    background-color: rgb(199,204,199);
+    padding: 0px 10px 0px 10px;
+}
+
+.appTitleStore{
+    font-family: cursive;
+    font-size: 150%;
+    padding: 15px;
+}
+
+.appAccountLogin{
+    display: inline;
+}
+
+.appLoginIcon{
+    width: 30px;
+    height: 30px;
+}
+
+.appLink{
+    font-family: cursive;
+}
+
+.appCart{
+    display: inline;
+}
+
+.appAlign{
+    float: right;
+    white-space: nowrap; 
+    padding: 10px;
+}
+
+.openBookMain{
+    width: 50px;
+    height: 50px;
+}
+
+li{
+    list-style-type: none; 
+}
+
+ul{
+    margin-left: 0; 
+    padding-left: 0; 
+}
+
+::ng-deep.mat-menu-panel{
+    width: 200px;
+}
+
+.liMenu{
+    font-family: cursive;
+}
+
+a{ 
+    text-decoration: none; 
+} 

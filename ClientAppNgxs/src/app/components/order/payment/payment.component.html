@@ -1,0 +1,57 @@
+<div class="cancel">
+    <a class="aCancel" (click)="cancel()"><img class="imgCancel" src="/assets/cancel.png" /></a>
+</div>
+<div class="container" *ngIf="!windowSuccess">
+
+    <label class="shopName">Shop name</label><br />
+    <label class="payDescription">Payment description</label>
+
+    <form [formGroup]="payForm" novalide (ngSubmit)="createPay()">
+        <div class="descriptionForPay">
+            <p>
+                <input type="text" class="description" formControlName="description" placeholder="Payment name" />
+            </p>
+        </div>
+
+        <div class="cardNumber">
+            <p>
+                <input type="text" formControlName="cardnumber" placeholder="Card number" class="card" />
+            </p>
+        </div>
+
+        <div class="cardmonth">
+            <p>
+                <input type="number" formControlName="month" placeholder="Month" class="monthCard" />
+            </p>
+        </div>
+
+        <div class="cardyear">
+            <p>
+                <input type="number" formControlName="year" placeholder="Year" class="yearCard" />
+            </p>
+        </div>
+
+        <div class="cardcvc">
+            <p>
+                <input type="text" formControlName="cvc" placeholder="CVC" class="cardCVC" />
+            </p>
+        </div>
+
+        <div class="buttonPay">
+            <button class="payButton" (click)="createPay()"><label class="price">Pay $
+                    {{orderItem.totalAmount}}</label></button>
+        </div>
+    </form>
+
+
+</div>
+
+<div *ngIf="windowSuccess">
+    <img src="/assets/ok.png" class="imgOk" />
+    <p>
+        <label class="labelThank">Thank You for your order!</label>
+    </p>
+    <p>
+        <button class="buttonContinue" (click)="continue()">Continue</button>
+    </p>
+</div>

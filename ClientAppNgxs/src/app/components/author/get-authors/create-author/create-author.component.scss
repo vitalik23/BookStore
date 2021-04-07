@@ -1,0 +1,26 @@
+.authorLabel{
+    padding-left: 160px;
+    padding-bottom: 20px;
+    font-family: cursive;
+    font-size: 15px;
+}
+
+.authorInput{
+    width: 400px;
+}
+
+.authorButtonCreate{
+    float: right;
+    width: 50%;
+    background: white;
+    border-radius: 1px solid black;
+    margin-top: 15px;
+}
+
+.authorButtonCancel{
+    float: left;
+    width: 50%;
+    background: white;
+    border-radius: 1px solid black;
+    margin-top: 15px;
+}

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Store.BusinessLogicLayer.Models.Authentication;
 using Store.BusinessLogicLayer.Models.Tokens;
 using Store.BusinessLogicLayer.Services.Interfaces;
@@ -14,7 +15,7 @@ namespace Store.PresentationLayer.Controllers
     {
         private readonly IAccountService _accountService;
 
-        public AccountController(IAccountService accountService)
+        public AccountController(IAccountService accountService, IUserService userService)
         {
             _accountService = accountService;
         }
@@ -46,6 +47,7 @@ namespace Store.PresentationLayer.Controllers
             return Ok();
         }
 
+        [Authorize]
         [HttpGet]
         [Route(Constants.Routes.SIGN_OUT)]
         public async Task<IActionResult> SignOutAsync()
@@ -71,5 +73,6 @@ namespace Store.PresentationLayer.Controllers
             return Ok(newTokens);
         }
 
+        
     }
 }

@@ -29,7 +29,6 @@ export class ConfirmEmailComponent implements OnInit {
     this.confirmEmail();
   }
 
-
   confirmEmail() {
     let model: ConfirmEmailModel = {
       email: this.email,

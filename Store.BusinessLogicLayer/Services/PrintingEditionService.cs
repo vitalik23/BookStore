@@ -34,10 +34,9 @@ namespace Store.BusinessLogicLayer.Services
             _autoMapper = autoMapper;
         }
 
-        public async Task CreatePrintingEditionAsync(PrintingEditionModel model)
+        public async Task<PrintingEditionModel> CreatePrintingEditionAsync(PrintingEditionModel model)
         {
-            
-
+           
             var existsPrintingEdition = await _printingEditionRepository.GetPrintingEditionByTitleAsync(model.Title);
 
             if (existsPrintingEdition is not null)
@@ -49,6 +48,11 @@ namespace Store.BusinessLogicLayer.Services
             await _printingEditionRepository.CreateAsync(printingEdition);
 
             await _authorInPrinting.AddAuthorToPEAsync(model.AuthorsId, printingEdition.Id);
+
+            var printingEditionModel = _autoMapper.Map<PrintingEditionModel>(printingEdition);
+
+            return printingEditionModel;
+
         }
 
         public async Task DeletePrintingEditionAsync(long id)
@@ -95,9 +99,8 @@ namespace Store.BusinessLogicLayer.Services
 
         }
 
-        public async Task UpdatePrintingEditionAsync(PrintingEditionModel model)
+        public async Task<PrintingEditionModel> UpdatePrintingEditionAsync(PrintingEditionModel model)
         {
-            
 
             var printingEdition = await GetPrintingEditionByIdAsync(model.Id);
 
@@ -124,6 +127,10 @@ namespace Store.BusinessLogicLayer.Services
             printingEdition.Type = model.Type.Value;
 
             await _printingEditionRepository.UpdateAsync(printingEdition);
+
+            var printingEditionModel = _autoMapper.Map<PrintingEditionModel>(printingEdition);
+
+            return printingEditionModel;
 
         }
 

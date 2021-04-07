@@ -20,7 +20,7 @@ export class AccountService {
     private cookieService: CookieService
     ) { }
 
-   signin(model: Login): Observable<Token>{
+  signin(model: Login): Observable<Token>{
     return this.http.post<Token>(`${environment.apiUrl}${Constants.SIGNIN}`, model);
   }
 
@@ -38,7 +38,6 @@ export class AccountService {
 
   updateTokens(token: Token): Observable<Token>{
     return this.http.post<Token>(`${environment.apiUrl}${Constants.UPDATE_TOKENS}`, token);
-    
   }
 
   getAccessToken(){

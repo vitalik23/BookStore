@@ -18,6 +18,8 @@ import * as reducers from './store/reducers/printing-edition.reducer';
 import { GetMaxPricePrintingEditionEffect } from './store/effects/get-maxprice-printing-edition.effect';
 import { GetPrintingEditionsEffect } from './store/effects/get-printing-editions.effect';
 import { GetPrintingEditionEffect } from './store/effects/get-printing-edition.effect';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 @NgModule({
@@ -36,7 +38,9 @@ import { GetPrintingEditionEffect } from './store/effects/get-printing-edition.e
     FormsModule,
     ReactiveFormsModule,
     NgxSliderModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    MatProgressSpinnerModule,
+    MatDialogModule
   ]
 })
 export class PrintingEditionModule { }

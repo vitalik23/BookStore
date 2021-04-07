@@ -1,0 +1,37 @@
+<div class="appHeader">
+    <div>
+        <img src="/assets/Снимок.PNG" class="openBookMain" routerLink="/">
+        <label class="appTitleStore">Book Publishing Company</label>
+        <div class="appAlign">
+
+            <div class="appAccountLogin">
+
+                <label class="appLink"><a routerLink="account/signin" *ngIf="!login">Log-in</a></label>
+
+                <img class="appLoginIcon" src="/assets/account-outline.png" mat-button [matMenuTriggerFor]="menu" />
+                <mat-menu #menu="matMenu" class="matMenuLi">
+                    <ul>
+                        <li class="liMenu" *ngIf="isAdmin === true"><a routerLink="order/get-orders">Order managment</a></li>
+                        <li class="liMenu" *ngIf="isAdmin === true"><a routerLink="admin/list-client">User managment</a></li>
+                        <li class="liMenu" *ngIf="isAdmin === true"><a routerLink="admin/list-printing-edition">Product
+                                managment</a></li>
+                        <li class="liMenu" *ngIf="isAdmin === true"><a routerLink="author/get-authors">Authors Page</a></li>
+                        <li class="liMenu" *ngIf="client === true"><a routerLink="order/client-orders">My Orders</a></li>
+                        <li class="liMenu" *ngIf="isAdmin === true || client === true"><a routerLink="user/profile">My
+                                profile</a></li>
+                        <li class="liMenu" *ngIf="isAdmin === true || client === true"><a (click)="logout()"
+                                class="logout">Log Out</a></li>
+                        <li *ngIf="!login" class="liMenu">Please log-in</li>
+                    </ul>
+
+                </mat-menu>
+
+            </div>
+
+            <div class="appCart">
+                <a (click)="showCart()"><img src="/assets/cart.png" /></a>
+                <span [matBadge]=countElementInCart matBadgeOverlap="false"></span>
+            </div>
+        </div>
+    </div>
+</div>

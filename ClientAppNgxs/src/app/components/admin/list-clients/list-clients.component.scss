@@ -1,0 +1,124 @@
+
+table{
+    border: 2px solid black;
+    width: 100%;
+}
+
+td, th{
+    border-right: 2px solid black;
+    height: 5%;
+}
+
+
+
+tr:nth-child(even){
+    background: white;
+    
+}
+
+tr:nth-child(odd){
+    background: rgb(226, 226, 226);
+}
+
+th.list{
+    background: silver;
+    font-family: cursive;
+    font-size: medium;
+    font-weight: 500;
+    color: black;
+}
+
+.listDeleteImg{
+    width: 20px;
+    height: 20px;
+    float: right;
+    transition: 0.2s; 
+}
+
+.listDeleteButton img:hover{
+    transform: scale(1.2);
+}
+
+.listEditImg{
+    width: 20px;
+    height: 20px;
+    float: left;
+    transition: 0.2s; 
+    margin-left: 10%;
+}
+
+.listEditButton img:hover{
+    transform: scale(1.2);
+}
+
+.listText{
+    font-family: cursive;
+    font-size: medium;
+    font-weight: 550;
+    padding-top: 20px;
+}
+
+.mat-column-userName{
+    width: 30%;
+}
+
+.mat-column-userEmail{
+    width: 35%;
+    padding-left: 2%;
+}
+
+.mat-column-status{
+    width: 10%;
+}
+
+.mat-column-buttons{
+    width: 8%;
+    padding-left: 2%;
+}
+
+.adminSlider{
+    padding-left: 4.5%;
+}
+
+.adminMenuImg{
+    width: 25px;
+    height: 25px;
+    float: right;
+    transition: 0.2s; 
+}
+
+.adminMenuImg:hover{
+    transform: scale(1.2);
+}
+
+.adminMenuInput{
+    border: 1px solid black;
+    border-radius: 10px 10px 10px 10px;
+    height: 30px;
+    width: 300px;
+}
+
+.checkboxLeft{
+    float: left;
+    padding-left: 10px;
+}
+
+.labelRightActive{
+    float: right;
+    padding-top: 13px;
+    padding-right: 25px;
+    font-family: serif;
+    font-size: 18px;
+}
+
+.divInline{
+    display: inline;
+}
+
+.labelRightBlocked{
+    float: right;
+    padding-top: 28px;
+    padding-right: 15px;
+    font-family: serif;
+    font-size: 18px;
+}

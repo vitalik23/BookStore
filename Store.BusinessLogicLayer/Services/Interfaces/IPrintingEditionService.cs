@@ -8,8 +8,8 @@ namespace Store.BusinessLogicLayer.Services.Interfaces
 {
     public interface IPrintingEditionService
     {
-        public Task CreatePrintingEditionAsync(PrintingEditionModel model);
-        public Task UpdatePrintingEditionAsync(PrintingEditionModel model);
+        public Task<PrintingEditionModel> CreatePrintingEditionAsync(PrintingEditionModel model);
+        public Task<PrintingEditionModel> UpdatePrintingEditionAsync(PrintingEditionModel model);
         public Task DeletePrintingEditionAsync(long id);
         public Task<PagedResponse<PrintingEditionModel>> GetFilteredPrintingEditionsAsync(PrintingEditionFilterModel model, PaginationFilterModel pagination);
         public Task<PrintingEdition> GetPrintingEditionByIdAsync(long id);

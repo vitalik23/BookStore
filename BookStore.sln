@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Store.DataAccessLayer", "St
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Store.Shared", "Store.Shared\Store.Shared.csproj", "{3E728156-F391-4412-A4FD-6413BE10449A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AjaxWebApplication", "AjaxWebApplication\AjaxWebApplication.csproj", "{755B6F61-3100-414C-81EB-397239095858}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{3E728156-F391-4412-A4FD-6413BE10449A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E728156-F391-4412-A4FD-6413BE10449A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E728156-F391-4412-A4FD-6413BE10449A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{755B6F61-3100-414C-81EB-397239095858}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{755B6F61-3100-414C-81EB-397239095858}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{755B6F61-3100-414C-81EB-397239095858}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{755B6F61-3100-414C-81EB-397239095858}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

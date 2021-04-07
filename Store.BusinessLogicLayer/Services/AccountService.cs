@@ -115,6 +115,10 @@ namespace Store.BusinessLogicLayer.Services
 
         public async Task LogoutAsync()
         {
+            var user = await _userService.GetUserByIdAsync();
+            user.RefreshToken = null;
+            await _userRepository.UpdateAsync(user);
+
             await _signInManager.SignOutAsync();
         }
 

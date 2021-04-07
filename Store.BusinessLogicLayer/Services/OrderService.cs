@@ -87,7 +87,7 @@ namespace Store.BusinessLogicLayer.Services
             return pagedResponse;
         }
 
-        public async Task CreateOrderAsync(List<CreateOrderItemModel> model)
+        public async Task<OrderModel> CreateOrderAsync(List<CreateOrderItemModel> model)
         {
 
             if (!model.Any())
@@ -123,9 +123,13 @@ namespace Store.BusinessLogicLayer.Services
             await _orderRepository.CreateAsync(order);
 
             await _orderItemService.CreateOrderItemAsync(order.Id, model);
+
+            var orderModel = _mapper.Map<OrderModel>(order);
+
+            return orderModel;
         }
 
-        public async Task PayAsync(PaymentModel model)
+        public async Task<OrderModel> PayAsync(PaymentModel model)
         {
 
             StripeConfiguration.ApiKey = _key;
@@ -175,6 +179,11 @@ namespace Store.BusinessLogicLayer.Services
             {
                 throw new ServerException(Constants.Success.UNPAID_ORDER);
             }
+
+            var orderModel = _mapper.Map<OrderModel>(order);
+
+            return orderModel;
+
         }
 
     }

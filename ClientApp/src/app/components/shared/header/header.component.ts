@@ -10,6 +10,7 @@ import { Store } from '@ngrx/store';
 import { AppState } from 'src/app/store/state/app-state.state';
 import { RefreshToken } from '../../account/store/actions/refresh-token.action';
 import { Logout } from '../../account/store/actions/login.actions';
+import { CartService } from 'src/app/service/cart.service';
 
 @Component({
   selector: 'app-header',
@@ -22,7 +23,8 @@ export class HeaderComponent implements OnInit {
     private matDialog: MatDialog,
     private jwtHelper: JwtHelperService,
     private accountService: AccountService,
-    private store$: Store<AppState>
+    private store$: Store<AppState>,
+    private cartService: CartService,
   ) { }
 
   accessToken: string = this.accountService.getAccessToken();
@@ -40,7 +42,7 @@ export class HeaderComponent implements OnInit {
   product: OrderItemModel[];
 
   ngOnInit(): void {
-
+    this.countElement();
 
     if (!this.jwtHelper.isTokenExpired(this.accessToken)) {
 
@@ -77,6 +79,11 @@ export class HeaderComponent implements OnInit {
 
   logout() {
     this.store$.dispatch(new Logout());
+  }
+
+  countElement(){
+    this.product = this.cartService.getItems();
+    this.countElementInCart = this.product.length;
   }
 
 }

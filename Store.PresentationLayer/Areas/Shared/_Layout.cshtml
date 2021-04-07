@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Admin</title>
+    <link rel="stylesheet" href="~/css/AccountAdmin.css" />
+    <link rel="stylesheet" href="~/css/administration.css" />
+
+</head>
+<body>
+    <header>
+        <ul class="menu">
+            <li><a asp-page="SignIn" asp-area="AccountAdmin">Login</a></li>
+            <li><a asp-page="Logout" asp-area="AccountAdmin">Logout</a></li>
+            <li><a asp-page="MainPage" asp-area="Home">Main page</a></li>
+        </ul>
+    </header>
+
+    @RenderBody()
+
+    <footer>
+        <div>
+            BookStore - 2021
+        </div>
+    </footer>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

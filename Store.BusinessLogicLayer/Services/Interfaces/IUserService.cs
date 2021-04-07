@@ -19,7 +19,7 @@ namespace Store.BusinessLogicLayer.Services.Interfaces
         public Task<User> FindByEmailAsync(string email);
         public Task DeleteUserAsync(string id);
         public Task CreateUserAsync(RegisterModel model);
-        public Task UpdateUserAsync(UserModel model);
+        public Task<UserModel> UpdateUserAsync(UserModel model);
         public Task<UserModel> GetDataAboutUserAsync();
         public Task<User> GetUserByIdAsync();
         public Task<PagedResponse<UserModel>> GetFilteredUsersAsync(UserFilterModel model, PaginationFilterModel pagination);

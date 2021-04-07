@@ -1,0 +1,48 @@
+<div class="container">
+
+    <h3 class="adminTitle">Edit profile - {{user.firstName}} {{user.lastName}}</h3>
+    <div>
+      <img class="adminImg" src="/assets/user.png" />
+      <img class="adminEditImg" src="/assets/edit.png" />
+    </div>
+    <form [formGroup]="editUserForm" novalidate (ngSubmit)="save()">
+      <div>
+        <label class="adminText">FirstName</label>
+        <p>
+          <input class="adminInputSize" name="FirstName" formControlName="firstName" required />
+        </p>
+      </div>
+      <div>
+        <label class="adminText">LastName</label>
+        <p>
+          <input class="adminInputSize" name="LastName" formControlName="lastName" required />
+        </p>
+      </div>
+      <div>
+        <label class="adminText">Email</label>
+        <p>
+          <input class="adminInputSize" name="Email" formControlName="email" required />
+        </p>
+      </div>
+      <div>
+        <label class="adminText">Password</label>
+        <p>
+          <input class="adminInputSize" name="Password" formControlName="password" type="password" required />
+        </p>
+      </div>
+      <div>
+        <label class="adminText">PasswordConfirm</label>
+        <p>
+          <input class="adminInputSize" name="PasswordConfirm" formControlName="passwordConfirm" type="password"
+            required />
+        </p>
+      </div>
+      <div class="adminDivButtonSave">
+        <button class="adminSave">Save</button>
+      </div>
+    </form>
+    <div class="adminDivButtonCancel">
+      <button class="adminCancel" (click)="cancel()">Close</button>
+    </div>
+  
+  </div>

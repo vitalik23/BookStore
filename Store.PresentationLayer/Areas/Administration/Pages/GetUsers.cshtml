@@ -1,0 +1,86 @@
+﻿@page
+@model Store.PresentationLayer.Areas.Administration.Pages.GetUsersModel
+@{
+}
+
+<div>
+    <div>
+        <form method="post">
+            <input type="hidden" asp-for="UserFilterAndPaginationModel.PaginationFilterModel.PageNumber" />
+            <input type="hidden" asp-for="UserFilterAndPaginationModel.PaginationFilterModel.PageSize" />
+            <p>
+                Name <input type="text" asp-for="UserFilterAndPaginationModel.UserFilterModels.UserName" />
+            </p>
+            <p>
+                <label>Blocked</label>
+                <input type="checkbox" value="true" name="UserFilterAndPaginationModel.UserFilterModels.IsBlocked" />
+            </p>
+            <p>
+                <label>UnBlocked</label>
+                <input type="checkbox" value="false" name="UserFilterAndPaginationModel.UserFilterModels.IsBlocked" />
+            </p>
+            <p>
+                <input type="submit" value="Filter" />
+            </p>
+        </form>
+
+    </div>
+    <div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Status</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var users in Model.PagedPesponse.Data)
+                {
+                    <tr>
+                        <td>@users.FirstName  @users.LastName</td>
+                        <td>@users.Email</td>
+                        <td>
+                            <form method="post">
+                                <label>@users.IsBlocked</label>
+                                <input type="submit" value="change" asp-route-id="@users.Id" asp-page-handler="ChangeStatus" />
+                            </form>
+                        </td>
+                        <td>
+                            <a asp-route-id="@users.Id" asp-page="UpdateUser">Edit</a>
+                        </td>
+                        <td>
+                            <form method="post">
+                                <input type="submit" value="delete" asp-route-id="@users.Id" asp-page-handler="Delete" />
+                            </form>
+                        </td>
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div>
+
+        <form method="post">
+            <input type="hidden" asp-for="UserFilterAndPaginationModel.UserFilterModels.UserName" />
+            <input type="hidden" asp-for="UserFilterAndPaginationModel.UserFilterModels.IsBlocked" />
+            <input type="hidden" asp-for="UserFilterAndPaginationModel.PaginationFilterModel.PageNumber" />
+
+            <input type="hidden" name="previousPage" value="1" />
+            <input type="submit" value="<previous" />
+        </form>
+
+        <form method="post">
+            <input type="hidden" asp-for="UserFilterAndPaginationModel.UserFilterModels.UserName" />
+            <input type="hidden" asp-for="UserFilterAndPaginationModel.UserFilterModels.IsBlocked" />
+            <input type="hidden" asp-for="UserFilterAndPaginationModel.PaginationFilterModel.PageNumber" />
+
+            <input type="hidden" name="nextPage" value="1" />
+            <input type="submit" value="next>" />
+        </form>
+    </div>
+</div>
+

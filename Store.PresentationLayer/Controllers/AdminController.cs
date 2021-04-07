@@ -55,8 +55,8 @@ namespace Store.PresentationLayer.Controllers
         [Route(Constants.Routes.UPDATE_USER_ADMIN)]
         public async Task<IActionResult> UpdateUserAdminAsync(UserModel model)
         {
-            await _adminService.UpdateUserAsync(model);
-            return Ok();
+            var user = await _adminService.UpdateUserAsync(model);
+            return Ok(user);
         }
 
         [Authorize(Roles = Constants.AuthRoles.ADMIN_ROLE, AuthenticationSchemes = Constants.Token.BEARER)]

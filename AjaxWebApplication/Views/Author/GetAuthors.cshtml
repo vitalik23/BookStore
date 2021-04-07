@@ -1,0 +1,45 @@
+﻿
+
+<link rel="stylesheet" href="~/css/getAuthors.css" />
+
+<div id="searchresults">
+    <h3>Authors page</h3>
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <th>
+                    Id
+                    <img src="~/img/sort.png" onclick="sorting('Id')" class="sortImg"/>
+                </th>
+                <th>
+                    <div class="left">Name</div>
+                    <div class="dropdown">
+                        <img src="~/img/openMenu.png"  class="menuImg" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"/>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <input type="text" id="filterByName" onchange="getAuthors()" />
+                        </div>
+                    </div>
+                </th>
+                <th>Products</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="id"></td>
+                <td id="name"></td>
+                <td id="products"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div>
+        <div class="left">
+            <input type="button" value="Previous" onclick="prevPage(1)"/>
+        </div>
+        <div>
+            <input type="button" value="Next" onclick="nextPage(1)"/>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/getAuthors.js"></script>

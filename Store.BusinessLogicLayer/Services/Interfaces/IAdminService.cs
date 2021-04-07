@@ -5,6 +5,6 @@ namespace Store.BusinessLogicLayer.Services.Interfaces
 {
     public interface IAdminService
     {
-        public Task UpdateUserAsync(UserModel model);
+        public Task<UserModel> UpdateUserAsync(UserModel model);
     }
 }

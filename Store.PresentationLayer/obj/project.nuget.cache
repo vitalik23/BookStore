@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "F5VVQM3A52g4zREFf0kzUHdI+UNVT3xmyEkilimqiDf0aKwtE2ZWOKjkyDX/H3uB2EH1UlhANvDOA97bwGlHOw==",
+  "dgSpecHash": "SzXmu6+1sLg388Fk7OaMJEHhe4l9QZACSxzpHsWgjxvXBx/wY/lX3xwm9GfCzEJ0JnjHD2CYUUmdlZEaQHETEg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Anuitex\\source\\repos\\BookStore\\Store.PresentationLayer\\Store.PresentationLayer.csproj",
+  "projectFilePath": "C:\\Projects\\BookStore\\Store.PresentationLayer\\Store.PresentationLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Anuitex\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\Anuitex\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.0\\automapper.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512",

@@ -25,7 +25,7 @@ namespace Store.BusinessLogicLayer.Services
             _autoMapper = autoMapper;
         }
 
-        public async Task CreateAuthorAsync(AuthorModel model)
+        public async Task<AuthorModel> CreateAuthorAsync(AuthorModel model)
         {
             if (string.IsNullOrWhiteSpace(model.Name))
             {
@@ -41,6 +41,11 @@ namespace Store.BusinessLogicLayer.Services
             }
             var author = _autoMapper.Map<Author>(model);
             await _authorRepository.CreateAsync(author);
+
+            var authorModel = _autoMapper.Map<AuthorModel>(author);
+
+            return authorModel;
+
         }
 
         public async Task DeleteAuthorAsync(long id)
@@ -91,7 +96,7 @@ namespace Store.BusinessLogicLayer.Services
             return authorModel;
         }
 
-        public async Task UpdateAuthorAsync(AuthorModel model)
+        public async Task<AuthorModel> UpdateAuthorAsync(AuthorModel model)
         {
             var author = await _authorRepository.GetByIdAsync(model.Id);
 
@@ -106,6 +111,10 @@ namespace Store.BusinessLogicLayer.Services
             }
 
             await _authorRepository.UpdateAsync(author);
+
+            var authorModel = _autoMapper.Map<AuthorModel>(author);
+
+            return authorModel;
         }
 
         public async Task<IEnumerable<AuthorModel>> GetAllAuthorsAsync()

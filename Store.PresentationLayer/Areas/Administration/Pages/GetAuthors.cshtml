@@ -1,0 +1,65 @@
+﻿@page
+@model Store.PresentationLayer.Areas.Administration.Pages.GetAuthorsModel
+@{
+}
+
+<div>
+    <div>
+        <form method="post" name="filtering">
+            <input type="hidden" asp-for="AuthorFilterAndPaginationModel.PaginationFilterModels.PageNumber" />
+            <input type="hidden" asp-for="AuthorFilterAndPaginationModel.PaginationFilterModels.PageSize" />
+            <p>
+                Name <input type="text" asp-for="AuthorFilterAndPaginationModel.AuthorFilterModels.Name" onchange="filtering.submit()"/>
+            </p>
+        </form>
+    </div>
+    <div>
+        <a asp-page="AddAuthor" asp-area="Administration">Add Author</a>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Product</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var authors in Model.PagedPesponse.Data)
+                {
+                    <tr>
+                        <td>@authors.Id</td>
+                        <td>@authors.Name</td>
+                        <td>@foreach (var products in authors.AuthorInPrintingEdition) 
+                            {
+                                <p>@products.PrintingEdition.Title</p>
+                            }
+                        </td>
+                        <td><a asp-page="UpdateAuthor" asp-area="Administration" asp-route-id="@authors.Id">Edit</a></td>
+                        <td><a asp-page-handler="Delete" asp-route-id="@authors.Id">Delete</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div>
+
+        <form method="post">
+            <input type="hidden" asp-for="AuthorFilterAndPaginationModel.AuthorFilterModels.Name" />
+            <input type="hidden" asp-for="AuthorFilterAndPaginationModel.PaginationFilterModels.PageNumber" />
+
+            <input type="hidden" name="previousPage" value="1" />
+            <input type="submit" value="<previous" />
+        </form>
+
+        <form method="post">
+            <input type="hidden" asp-for="AuthorFilterAndPaginationModel.AuthorFilterModels.Name" />
+            <input type="hidden" asp-for="AuthorFilterAndPaginationModel.PaginationFilterModels.PageNumber" />
+
+            <input type="hidden" name="nextPage" value="1" />
+            <input type="submit" value="next>" />
+        </form>
+    </div>
+</div>
+

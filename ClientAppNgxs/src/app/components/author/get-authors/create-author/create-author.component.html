@@ -1,0 +1,18 @@
+
+
+<div>
+    <form [formGroup]="createAuthorForm" novalide (ngSubmit)="create()">
+        <div>
+            <label class="authorLabel">Add new Author</label>
+            <p>
+                <input class="authorInput" formControlName="name" required placeholder="Name" />
+            </p>
+        </div>
+        <div>
+            <button class="authorButtonCreate">Create</button>
+        </div>
+    </form>
+    <div>
+        <button class="authorButtonCancel" (click)="cancel()">Cancel</button>
+    </div>
+</div>

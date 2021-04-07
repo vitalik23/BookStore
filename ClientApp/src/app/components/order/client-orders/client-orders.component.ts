@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { select, Store } from '@ngrx/store';
 import { Constants } from 'src/app/constants/constants';
+import { isSpinnerShow } from 'src/app/store/selectors/spinner.selector';
 import { AppState } from 'src/app/store/state/app-state.state';
+import { ProgressBarComponent } from '../../progress-bar/progress-bar.component';
 import { OrderItemModel } from '../models/order-item.model';
 import { PaymentComponent } from '../payment/payment.component';
 import { GetOrdersClient } from '../store/actions/get-orders-client.action';
@@ -28,6 +30,14 @@ export class ClientOrdersComponent implements OnInit {
 
   ngOnInit(): void {
 
+    this.store$.pipe(select(isSpinnerShow)).subscribe(
+      data => {
+        if(data){
+          return this.openDialog();
+        }
+        this.closeDialog();
+      }
+    );
 
     this.store$.pipe(select(getOrderItem)).subscribe(
       data => {
@@ -61,6 +71,13 @@ export class ClientOrdersComponent implements OnInit {
 
   }
 
+  openDialog(){
+    this.matDialog.open(ProgressBarComponent);
+  }
+
+  closeDialog(){
+    this.matDialog.closeAll();
+  }
 
   pagedChanged(event) {
     this.pageNumber = event;

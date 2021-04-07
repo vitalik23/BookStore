@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { select, Store } from '@ngrx/store';
+import { ActionsSubject, select, Store } from '@ngrx/store';
 import { AppState } from 'src/app/store/state/app-state.state';
 import { PrintingEditionFilterModel } from '../admin/models/printing-edition-filter.model';
 import { PrintingEdition } from './models/printing-edition.model';
@@ -13,6 +13,12 @@ import { Constants } from 'src/app/constants/constants';
 import { PrintingTypeEnum } from 'src/app/enums/printing-type';
 import { getData, getPageNumber, getPageSize, getTotalItems } from './store/selectors/get-printing-editions.selector';
 import { GetPrintingEditions } from './store/actions/get-printing-editions.action';
+import { ofType } from '@ngrx/effects';
+import * as actionsPrintingEdition from './store/actions/get-printing-editions.action';
+import { MatDialog } from '@angular/material/dialog';
+import { ProgressBarComponent } from '../progress-bar/progress-bar.component';
+import { isSpinnerShow } from 'src/app/store/selectors/spinner.selector';
+import { SpinnerShow } from 'src/app/store/actions/spinner.action';
 
 @Component({
   selector: 'app-printing-edition',
@@ -56,10 +62,14 @@ export class PrintingEditionComponent implements OnInit {
   keysCurrency: string[] = [];
   currencyType = CurrencyTypeEnum;
 
+  progressBar: boolean;
+
   constructor(
     private store$: Store<AppState>,
     private formBuilder: FormBuilder,
+    public dialog: MatDialog
   ) {
+
     this.priceRange = this.formBuilder.group({
       minPrice: this.minPrice,
       maxPrice: this.maxPrice
@@ -75,6 +85,14 @@ export class PrintingEditionComponent implements OnInit {
 
   ngOnInit(): void {
 
+    this.store$.pipe(select(isSpinnerShow)).subscribe(
+      data => {
+        if(data){
+          return this.openDialog();
+        }
+        this.closeDialog();
+      }
+    );
 
     this.store$.dispatch(new GetMaxPricePrintingEdition());
 
@@ -88,7 +106,6 @@ export class PrintingEditionComponent implements OnInit {
         }
       }
     );
-
 
     this.store$.pipe(select(getPageNumber)).subscribe(
       data => {
@@ -137,8 +154,13 @@ export class PrintingEditionComponent implements OnInit {
     this.keysCurrency = Object.keys(this.currencyType).filter(Number);
   }
 
+  openDialog(){
+    this.dialog.open(ProgressBarComponent);
+  }
 
-
+  closeDialog(){
+    this.dialog.closeAll();
+  }
 
   pagedChanged(event) {
     this.pageNumber = event;

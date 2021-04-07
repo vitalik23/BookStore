@@ -152,7 +152,7 @@ namespace Store.BusinessLogicLayer.Services
             }
         }
 
-        public async Task UpdateUserAsync(UserModel model)
+        public async Task<UserModel> UpdateUserAsync(UserModel model)
         {
             var user = await GetUserByIdAsync();
 
@@ -188,6 +188,10 @@ namespace Store.BusinessLogicLayer.Services
             }
 
             await _userRepository.UpdateAsync(user);
+
+            var userModel = _autoMapper.Map<UserModel>(user);
+
+            return userModel;
         }
 
         public async Task ChangeStatusUserAsync(string id)

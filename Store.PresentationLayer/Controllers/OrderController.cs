@@ -36,8 +36,8 @@ namespace Store.PresentationLayer.Controllers
         [Route(Constants.Routes.BUY_ORDER)]
         public async Task<IActionResult> BuyAsync(PaymentModel model)
         {
-            await _orderService.PayAsync(model);
-            return Ok();
+            var order = await _orderService.PayAsync(model);
+            return Ok(order);
         }
 
         [Authorize(Roles = Constants.AuthRoles.CLIENT_ROLE, AuthenticationSchemes = Constants.Token.BEARER)]
@@ -45,8 +45,8 @@ namespace Store.PresentationLayer.Controllers
         [Route(Constants.Routes.CREATE_ORDER)]
         public async Task<IActionResult> CreateOrderAsync(List<CreateOrderItemModel> model)
         {
-            await _orderService.CreateOrderAsync(model);
-            return Ok();
+            var order = await _orderService.CreateOrderAsync(model);
+            return Ok(order);
         }
 
         [Authorize(Roles = Constants.AuthRoles.CLIENT_ROLE, AuthenticationSchemes = Constants.Token.BEARER)]

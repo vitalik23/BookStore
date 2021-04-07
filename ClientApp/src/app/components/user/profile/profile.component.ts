@@ -6,6 +6,7 @@ import { EditUser, GetUser } from '../store/actions/profile.actions';
 import { UserProfile } from '../models/user-profile.model';
 import {  FormControl, FormGroup, Validators } from '@angular/forms';
 import { Constants } from 'src/app/constants/constants';
+import * as alertify from 'alertifyjs';
 
 @Component({
   selector: 'app-profile',
@@ -52,12 +53,10 @@ export class ProfileComponent implements OnInit {
   }
 
   save() {
-    
-
-    let password = this.editForm.get("password").value;
-    let currentPassword = this.editForm.get("currentPassword").value;
+    let password = this.editForm.get(Constants.FORM_FIELD_PASSWORD).value;
+    let currentPassword = this.editForm.get(Constants.FORM_CURRENT_PASSWORD).value;
     if(currentPassword == "" && password != ""){
-        alert("Error");
+        alertify.error(Constants.PLEASE_ENTER_OLD_PASSWORD);
         return;
     }
     let edit = this.editForm.value;

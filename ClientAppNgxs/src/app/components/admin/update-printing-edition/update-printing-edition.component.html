@@ -1,0 +1,76 @@
+
+
+<div class="container">
+    <div class="paddingOfTop">
+        <label class="authorLabelUpdate">
+            Update PrintingEdition
+            <img class="buttonImg" src="/assets/edit.png" />
+        </label>
+    </div>
+    <form [formGroup]="updatePrintingEditionForm" novalide (ngSubmit)="updatePrintingEdition()">
+
+        <div class="left">
+            <div class="divTitle">
+                <label class="labelTitle">Title</label>
+
+                <textarea class="printingEditionInputTitle" formControlName="title" maxlength="100"></textarea>
+
+            </div>
+
+            <div class="divDescription">
+                <label class="labelDescription">Description</label>
+
+                <textarea class="printingEditionInputDescription" formControlName="description"
+                    maxlength="1000"></textarea>
+
+            </div>
+
+        </div>
+
+        <div class="right">
+
+            <div class="bookImg">
+                <img class="imgBook" src="/assets/book.png" />
+            </div>
+
+            <div class="divPrice">
+                <label class="lablePrice">Price</label>
+
+                <input class="printingEditionInputPrice" formControlName="price" />
+
+            </div>
+
+            <div class="divCurrency">
+                <label class="labelCurrency">Currency</label>
+                <label class="labelUSD">USD</label>
+            </div>
+
+            <div class="divCategory">
+                <label class="labelCategory">Category</label>
+                <mat-form-field>
+                    <mat-label class="">Type</mat-label>
+                    <mat-select formControlName="type">
+                        <mat-option *ngFor="let type of keysPrinting" [value]="type">
+                            {{printingType[type]}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+
+            <div class="divAuthor">
+                <label class="labelAuthor">Author</label>
+                <mat-form-field>
+                    <mat-label class="">Author</mat-label>
+                    <mat-select formControlName="authors" multiple class="selectAuthor">
+                        <mat-option *ngFor="let author of authors$ | async" [value]="author.id">
+                            {{author.name}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+
+        </div>
+
+        <button class="printingEditionButtonUpdate">Update</button>
+    </form>
+</div>

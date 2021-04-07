@@ -12,6 +12,8 @@ import { PrintingTypeEnum } from 'src/app/enums/printing-type';
 import { Constants } from 'src/app/constants/constants';
 import { getData, getPageNumber, getPageSize, getTotalItems } from '../../printing-edition/store/selectors/get-printing-editions.selector';
 import { GetPrintingEditions } from '../../printing-edition/store/actions/get-printing-editions.action';
+import { isSpinnerShow } from 'src/app/store/selectors/spinner.selector';
+import { ProgressBarComponent } from '../../progress-bar/progress-bar.component';
 
 
 @Component({
@@ -54,6 +56,15 @@ export class ListPrintingEditionComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+    this.store$.pipe(select(isSpinnerShow)).subscribe(
+      data => {
+        if(data){
+          return this.openDialog();
+        }
+        this.closeDialog();
+      }
+    );
 
     this.store$.pipe(select(getPageNumber)).subscribe(
       data => {
@@ -99,6 +110,14 @@ export class ListPrintingEditionComponent implements OnInit {
       }
     );
 
+  }
+
+  openDialog(){
+    this.matDialog.open(ProgressBarComponent);
+  }
+
+  closeDialog(){
+    this.matDialog.closeAll();
   }
 
   pagedChanged(event) {

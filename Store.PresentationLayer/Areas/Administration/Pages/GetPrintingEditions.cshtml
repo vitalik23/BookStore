@@ -1,0 +1,79 @@
+﻿@page
+@model Store.PresentationLayer.Areas.Administration.Pages.GetPrintingEditionsModel
+@{
+}
+
+<div>
+    <div>
+        <form method="post" name="filtering">
+            <input type="hidden" asp-for="PrintingEditionFilterAndPaginationModel.PaginationFilterModels.PageNumber" />
+            <input type="hidden" asp-for="PrintingEditionFilterAndPaginationModel.PaginationFilterModels.PageSize" />
+            <p>
+                Author name <input type="text" asp-for="PrintingEditionFilterAndPaginationModel.PrintingEditionFilterModels.AuthorName" onchange="filtering.submit()" />
+            </p>
+            <p>
+                Printing edition title <input type="text" asp-for="PrintingEditionFilterAndPaginationModel.PrintingEditionFilterModels.PrintingEditionName" onchange="filtering.submit()" />
+            </p>
+        </form>
+    </div>
+    <div>
+        <p><a asp-page="AddPrintingEdition" asp-area="Administration">Add printing edition</a></p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Category</th>
+                    <th>Author</th>
+                    <th>Price</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var printingEdition in Model.PagedPesponse.Data)
+                {
+                    <tr>
+                        <td>@printingEdition.Id</td>
+                        <td>@printingEdition.Title</td>
+                        <td>@printingEdition.Description</td>
+                        <td>@printingEdition.Type</td>
+                        <td>
+                            @foreach (var authors in printingEdition.AuthorInPrintingEdition)
+                            {
+                                <p>@authors.Author.Name</p>
+                            }
+                        </td>
+                        <td>@printingEdition.Price</td>
+                        <td>
+                            <a asp-page="UpdatePrintingEdition" asp-area="Administration" asp-route-id="@printingEdition.Id">Edit</a>
+                        </td>
+                        <td>
+                            <a asp-page-handler="Delete" asp-route-id="@printingEdition.Id">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div>
+
+        <form method="post">
+            <input type="hidden" asp-for="PrintingEditionFilterAndPaginationModel.PrintingEditionFilterModels.AuthorName" />
+            <input type="hidden" asp-for="PrintingEditionFilterAndPaginationModel.PaginationFilterModels.PageNumber" />
+
+            <input type="hidden" name="previousPage" value="1" />
+            <input type="submit" value="<previous" />
+        </form>
+
+        <form method="post">
+            <input type="hidden" asp-for="PrintingEditionFilterAndPaginationModel.PrintingEditionFilterModels.AuthorName" />
+            <input type="hidden" asp-for="PrintingEditionFilterAndPaginationModel.PaginationFilterModels.PageNumber" />
+
+            <input type="hidden" name="nextPage" value="1" />
+            <input type="submit" value="next>" />
+        </form>
+    </div>
+</div>
+

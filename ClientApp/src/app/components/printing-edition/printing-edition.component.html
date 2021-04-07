@@ -1,127 +1,128 @@
-<div>
-    <div class="filterDiv">
-        <label class="catalogLable">Catalog</label>
-        <input type="text" placeholder="Search by book title" class="search" [(ngModel)]="title"
-            (ngModelChange)="printingEditionFilter()" />
 
-    </div>
-    <mat-drawer-container class="example-container">
+<div class="maincontainer">
+    <div class="mainInfo">
+        <div class="filterDiv">
+            <label class="catalogLable">Catalog</label>
+            <input type="text" placeholder="Search by book title" class="search" [(ngModel)]="title"
+                (ngModelChange)="printingEditionFilter()" />
 
-        <mat-drawer mode="side" opened class="filterContent">
+        </div>
+        <mat-drawer-container class="example-container">
 
-            <div class="mainFilterDiv">
+            <mat-drawer mode="side" opened class="filterContent">
 
-                <div class="filterByCategories" [formGroup]="cetegoriesForm">
-                    <label class="labelCategories">Categories</label>
-                    <div>
-                        <input type="checkbox" formControlName="book" (ngModelChange)="checkFilterBook()" />
-                        <label class="booksLabel">Books</label>
+                <div class="mainFilterDiv">
+
+                    <div class="filterByCategories" [formGroup]="cetegoriesForm">
+                        <label class="labelCategories">Categories</label>
+                        <div>
+                            <input type="checkbox" formControlName="book" (ngModelChange)="checkFilterBook()" />
+                            <label class="booksLabel">Books</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" formControlName="journal" (ngModelChange)="checkFilterJournal()" />
+                            <label class="journalsLabel">Journals</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" formControlName="newspaper"
+                                (ngModelChange)="checkFilterNewspaper()" />
+                            <label class="newspapersLabel">Newspapers</label>
+                        </div>
                     </div>
-                    <div>
-                        <input type="checkbox" formControlName="journal" (ngModelChange)="checkFilterJournal()" />
-                        <label class="journalsLabel">Journals</label>
+
+                    <div class="filterByPrice" [formGroup]="priceRange">
+                        <label class="labelPrice">Price</label> <br />
+
+                        <label class="minLabel" data-title="min">
+                            <input type="text" class="inputMinPrice" [ngModel]="minPrice" formControlName="minPrice" />
+                        </label> -
+                        <label class="maxLabel" data-title="max">
+                            <input type="text" class="inputMaxPrice" [ngModel]="maxPrice" formControlName="maxPrice" />
+                        </label>
+                        <label class="dollarLabel">{{typeCurrency | currency}}</label>
+
+                        <input type="submit" value="OK" class="buttonFilterPrice" (click)="filterByMinAndMaxPrice()" />
+
+                        <ngx-slider class="rangeSlider" [(value)]="minPrice" [(highValue)]="maxPrice"
+                            [options]="options">
+                        </ngx-slider>
                     </div>
-                    <div>
-                        <input type="checkbox" formControlName="newspaper" (ngModelChange)="checkFilterNewspaper()" />
-                        <label class="newspapersLabel">Newspapers</label>
+
+
+                </div>
+
+
+            </mat-drawer>
+            
+            <mat-drawer-content>
+
+                <div class="currencyDiv">
+
+                    <div class="rightSelect">
+                        <label class="sortLabel">Sort by</label>
+                        <mat-form-field class="selectSort">
+                            <mat-label class="labelSort">Сhoose</mat-label>
+                            <mat-select>
+                                <mat-option (click)="sortByPrice('Asc')" value="Price: Low to High">Price: Low to High
+                                </mat-option>
+                                <mat-option (click)="sortByPrice('Desc')" value="Price: High to Low">Price: High to Low
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
                     </div>
+
+
+                    <div class="leftSelect">
+                        <label class="currencyLabel">Currency</label>
+                        <mat-form-field class="selectCurrency">
+                            <mat-label class="labelCurrency">Сhoose</mat-label>
+                            <mat-select>
+                                <mat-option *ngFor="let currency of keysCurrency" [value]="currency"
+                                    (click)="convertCurrency(currency)">
+                                    {{currencyType[currency]}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+
+
                 </div>
 
-                <div class="filterByPrice" [formGroup]="priceRange">
-                    <label class="labelPrice">Price</label> <br />
-
-                    <label class="minLabel" data-title="min">
-                        <input type="text" class="inputMinPrice" [ngModel]="minPrice" formControlName="minPrice" />
-                    </label> -
-                    <label class="maxLabel" data-title="max">
-                        <input type="text" class="inputMaxPrice" [ngModel]="maxPrice" formControlName="maxPrice" />
-                    </label>
-                    <label class="dollarLabel">{{typeCurrency | currency}}</label>
-
-                    <input type="submit" value="OK" class="buttonFilterPrice" (click)="filterByMinAndMaxPrice()" />
-
-                    <ngx-slider class="rangeSlider" [(value)]="minPrice" [(highValue)]="maxPrice" [options]="options">
-                    </ngx-slider>
-                </div>
-
-
-            </div>
-
-
-        </mat-drawer>
-
-        <mat-drawer-content>
-
-            <div class="currencyDiv">
-
-                <div class="rightSelect">
-                    <label class="sortLabel">Sort by</label>
-                    <mat-form-field class="selectSort">
-                        <mat-label class="labelSort">Сhoose</mat-label>
-                        <mat-select>
-                            <mat-option (click)="sortByPrice('Asc')" value="Price: Low to High">Price: Low to High
-                            </mat-option>
-                            <mat-option (click)="sortByPrice('Desc')" value="Price: High to Low">Price: High to Low
-                            </mat-option>
-                        </mat-select>
-                    </mat-form-field>
-                </div>
-
-
-                <div class="leftSelect">
-                    <label class="currencyLabel">Currency</label>
-                    <mat-form-field class="selectCurrency">
-                        <mat-label class="labelCurrency">Сhoose</mat-label>
-                        <mat-select>
-                            <mat-option *ngFor="let currency of keysCurrency" [value]="currency"
-                                (click)="convertCurrency(currency)">
-                                {{currencyType[currency]}}
-                            </mat-option>
-                        </mat-select>
-                    </mat-form-field>
-                </div>
-
-
-            </div>
-
-            <div>
-                <mat-grid-list cols="3" rowHeight="20:11">
-                    <mat-grid-tile
-                        *ngFor="let printingEdition of printingEditions | paginate: { id:'list_pagination',
+                <div class="elements">
+                    <mat-grid-list cols="3" rowHeight="20:11">
+                        <mat-grid-tile
+                            *ngFor="let printingEdition of printingEditions | paginate: { id:'list_pagination',
                                                                                                  itemsPerPage: pageSize, 
                                                                                                  currentPage: pageNumber,
                                                                                                  totalItems: totalItems }"
-                        class="matGridList">
-                        <ul [routerLink]="['/data', printingEdition.id]">
-                            <li><img class="imgBook" src="/assets//book.png"></li>
-                            <li class="title">{{printingEdition.title}}</li>
-                            <li *ngFor="let printingEdition of printingEdition.authorInPrintingEdition"
-                                class="authorName">
-                                {{printingEdition.author.name}}
-                            </li>
-                            <li class="price">
-                                {{printingEdition.currency | currency}} {{printingEdition.price | price}}
-                            </li>
-                        </ul>
-                    </mat-grid-tile>
-                </mat-grid-list>
+                            class="matGridList">
+                            <ul [routerLink]="['/data', printingEdition.id]">
+                                <li><img class="imgBook" src="/assets//book.png"></li>
+                                <li class="title">{{printingEdition.title}}</li>
+                                <li *ngFor="let printingEdition of printingEdition.authorInPrintingEdition"
+                                    class="authorName">
+                                    {{printingEdition.author.name}}
+                                </li>
+                                <li class="price">
+                                    {{printingEdition.currency | currency}} {{printingEdition.price | price}}
+                                </li>
+                            </ul>
+                        </mat-grid-tile>
+                    </mat-grid-list>
+                </div>
+            </mat-drawer-content>
+        </mat-drawer-container>
+
+        <div class="paginationAndSettings">
+            <div class="settings" data-title="Log in as a Administrator">
+                <img src="/assets/settings.png" class="imgSettings" [routerLink]="['/account/login']" />
+                <label class="labelService">Service</label>
             </div>
-        </mat-drawer-content>
-    </mat-drawer-container>
 
-    <div class="paginationAndSettings">
-        <div class="settings" data-title="Log in as a Administrator">
-            <img src="/assets/settings.png" class="imgSettings" [routerLink]="['/account/login']" />
-            <label class="labelService">Service</label>
+            <div class="pagination">
+                <pagination-controls id="list_pagination" maxSize="6" directionLinks="true"
+                    (pageChange)="pagedChanged($event)"></pagination-controls>
+            </div>
         </div>
-
-        <div class="pagination">
-            <pagination-controls id="list_pagination" maxSize="6" directionLinks="true"
-                (pageChange)="pagedChanged($event)"></pagination-controls>
-        </div>
-
-
     </div>
-
-
 </div>

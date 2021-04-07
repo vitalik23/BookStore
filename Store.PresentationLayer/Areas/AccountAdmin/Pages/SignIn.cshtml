@@ -1,0 +1,23 @@
+﻿@page
+@model Store.PresentationLayer.Areas.AccountAdmin.Pages.SignInModel
+@{
+}
+
+
+<h2>SignIn</h2>
+
+<form method="post">
+    <p>
+        <label>Email</label>
+        <input type="text" asp-for="LoginModel.Email" />
+    </p>
+
+    <p>
+        <label >Password</label>
+        <input type="password" asp-for="LoginModel.Password" />
+    </p>
+
+    <p>
+        <input type="submit" value="Оправить" />
+    </p>
+</form>

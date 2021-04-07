@@ -22,6 +22,9 @@ import { ErrorInterceptorService } from './interceptors/error.interceptor.';
 import { RefreshTokenEffect } from './components/account/store/effects/refresh-token.effect';
 import { Constants } from './constants/constants';
 import { clearState } from '../app/store/reducers/app-reducer.reducer';
+import { ProgressBarComponent } from './components/progress-bar/progress-bar.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 export function tokenGetter() {
   return localStorage.getItem(Constants.ACCESS_TOKEN);
@@ -31,6 +34,7 @@ export function tokenGetter() {
   declarations: [
     AppComponent,
     HeaderComponent,
+    ProgressBarComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,7 +53,9 @@ export function tokenGetter() {
     }),
     BrowserAnimationsModule,
     FormsModule,
-    SharedModule
+    SharedModule,
+    MatDialogModule,
+    MatProgressSpinnerModule
 
   ],
   exports: [

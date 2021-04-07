@@ -1,0 +1,167 @@
+
+table{
+    border: 2px solid black;
+    width: 100%;
+}
+
+td, th{
+    border-right: 2px solid black;
+    height: 5%;
+}
+
+tr:nth-child(even){
+    background: white;
+    
+}
+
+tr:nth-child(odd){
+    background: rgb(226, 226, 226);
+    border: 2px solid black;
+}
+
+
+th.list{
+    background: silver;
+    font-family: cursive;
+    font-size: medium;
+    font-weight: 500;
+    color: black;
+}
+
+.mat-column-id{
+    width: 10%;
+}
+
+.mat-column-title{
+    width: 20%;
+}
+
+.mat-column-description{
+    width: 30%;
+}
+
+.mat-column-category{
+    width: 10%;
+}
+
+.mat-column-author{
+    width: 10%;
+}
+
+.mat-column-price{
+    width: 10%;
+}
+
+.mat-column-edit{
+    width: 10%;
+}
+
+.labelProductManagment{
+    font-family: cursive;
+    font-size: 18px;
+    font-weight: 550;
+}
+
+.listEditImg{
+    width: 25px;
+    height: 25px;
+    margin-left: 20px;
+    transition: 0.2s;
+}
+
+.listEditImg:hover{
+    transform: scale(1.2);
+}
+
+.listDeleteImg{
+    width: 25px;
+    height: 25px;
+    float: right;
+    transition: 0.2s;
+}
+
+.listDeleteImg:hover{
+    transform: scale(1.2);
+}
+
+.buttonImg{
+    width: 25px;
+    height: 25px;
+    transition: 0.2s;
+}
+
+.buttonImg:hover{
+    transform: scale(1.2);
+}
+
+.printingEditionAddCircle{
+    float: right;
+    margin-right: 120px;
+}
+
+.container{
+    padding-top: 20px;
+}
+
+.inputSearch{
+    border: 1px solid black;
+    border-radius: 10px 10px 10px 10px;
+    height: 30px;
+    width: 200px;
+}
+
+.labelBook{
+    float: right;
+    padding-right: 50px;
+    padding-top: 14px;
+    font-family: cursive;
+    font-size: 16px;
+}
+
+.checkboxBook{
+    padding-left: 10px;
+}
+
+.labelJournal{
+    float: right;
+    padding-right: 30px;
+    padding-top: 14px;
+    font-family: cursive;
+    font-size: 16px;
+}
+
+.checkboxJournal{
+    padding-left: 10px;
+}
+
+.labelNewspaper{
+    float: right;
+    padding-top: 14px;
+    font-family: cursive;
+    font-size: 16px;
+    padding-right: 5px;
+
+}
+
+.checkboxNewsPaper{
+    padding-left: 10px;
+}
+
+.printingEditionAddCircle:hover::after{
+    content: attr(data-title); 
+    left: 80%; 
+    top: 12%;
+    z-index: 1;
+    position: absolute;
+    background: white;
+    font-family: cursive; 
+    font-size: 14px; 
+    padding: 5px 10px;
+    border: 1px solid #333;
+    border-radius: 10px 0px 10px 10px;
+}
+
+li {
+    list-style-type: none; 
+}
+

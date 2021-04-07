@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Anuitex\\source\\repos\\BookStore\\Store.Shared\\Store.Shared.csproj": {}
+    "C:\\Projects\\BookStore\\Store.Shared\\Store.Shared.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Anuitex\\source\\repos\\BookStore\\Store.Shared\\Store.Shared.csproj": {
+    "C:\\Projects\\BookStore\\Store.Shared\\Store.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Anuitex\\source\\repos\\BookStore\\Store.Shared\\Store.Shared.csproj",
+        "projectUniqueName": "C:\\Projects\\BookStore\\Store.Shared\\Store.Shared.csproj",
         "projectName": "Store.Shared",
-        "projectPath": "C:\\Users\\Anuitex\\source\\repos\\BookStore\\Store.Shared\\Store.Shared.csproj",
+        "projectPath": "C:\\Projects\\BookStore\\Store.Shared\\Store.Shared.csproj",
         "packagesPath": "C:\\Users\\Anuitex\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Anuitex\\source\\repos\\BookStore\\Store.Shared\\obj\\",
+        "outputPath": "C:\\Projects\\BookStore\\Store.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Anuitex\\AppData\\Roaming\\NuGet\\NuGet.Config",

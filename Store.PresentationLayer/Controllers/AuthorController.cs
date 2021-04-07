@@ -24,8 +24,8 @@ namespace Store.PresentationLayer.Controllers
         [Route(Constants.Routes.CREATE_AUTHOR)]
         public async Task<IActionResult> CreateAuthorAsync(AuthorModel model)
         {
-            await _authorService.CreateAuthorAsync(model);
-            return Ok();
+            var author = await _authorService.CreateAuthorAsync(model);
+            return Ok(author);
         }
 
         [Authorize(Roles = Constants.AuthRoles.ADMIN_ROLE, AuthenticationSchemes = Constants.Token.BEARER)]
@@ -51,8 +51,8 @@ namespace Store.PresentationLayer.Controllers
         [Route(Constants.Routes.UPDATE_AUTHOR)]
         public async Task<IActionResult> UpdateAuthorAsync(AuthorModel model)
         {
-            await _authorService.UpdateAuthorAsync(model);
-            return Ok();
+            var author = await _authorService.UpdateAuthorAsync(model);
+            return Ok(author);
         }
 
         [Authorize(Roles = Constants.AuthRoles.ADMIN_ROLE, AuthenticationSchemes = Constants.Token.BEARER)]

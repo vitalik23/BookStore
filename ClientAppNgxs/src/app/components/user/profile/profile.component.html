@@ -1,0 +1,67 @@
+
+
+<div class="container">
+
+    <div class="leftMyProfile">
+      <label class="myProfile">My Profile</label>
+      <a data-title="Edit profile" class="profileEditImg" (click)="edit()" *ngIf="!isEdit"><img
+          src="/assets/edit.png" /></a>
+    </div>
+  
+    <div>
+      <img class="profileUserImg" src="/assets/user.png" />
+      <img *ngIf="isEdit" src="/assets/edit.png" />
+    </div>
+  
+    <div *ngIf="!isEdit">
+      <label class="profileLabel">Your First name</label>
+      <p><input class="outputData" placeholder="{{(user)?.firstName}}" disabled /></p>
+      <label class="profileLabel">Yuor Last name</label>
+      <p><input class="outputData" placeholder="{{(user)?.lastName}}" disabled /></p>
+      <label class="profileLabel">E-mail</label>
+      <p><input class="outputData" placeholder="{{(user)?.email}}" disabled /></p>
+    </div>
+  
+    <div *ngIf="isEdit">
+      <form [formGroup]="editForm" novalidate (ngSubmit)="save()">
+        <div>
+          <label class="profileLabel">First name</label>
+          <p>
+            <input class="outputData" name="FirstName" formControlName="firstName" required />
+          </p>
+        </div>
+        <div>
+          <label class="profileLabel">Last name</label>
+          <p>
+            <input class="outputData" name="LastName" formControlName="lastName" required />
+          </p>
+        </div>
+        <div>
+          <label class="profileLabel">E-mail</label>
+          <p>
+            <input class="outputData" name="Email" formControlName="email" required />
+          </p>
+        </div>
+        <div>
+          <label class="profileLabel">Current password</label>
+          <p>
+            <input class="outputData" name="Password" formControlName="currentPassword" type="password" required />
+          </p>
+        </div>
+        <div>
+          <label class="profileLabel">Password</label>
+          <p>
+            <input class="outputData" name="Password" formControlName="password" type="password" required />
+          </p>
+        </div>
+        <div>
+          <label class="profileLabel">Confirm password</label>
+          <p>
+            <input class="outputData" name="PasswordConfirm" formControlName="passwordConfirm" type="password" required />
+          </p>
+        </div>
+        <button class="profileButtonSave">Save</button>
+      </form>
+      <button class="profileButtonCancel" (click)="cancel()">Cancel</button>
+    </div>
+  </div>

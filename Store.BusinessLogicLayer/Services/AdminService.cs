@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Identity;
 using Store.BusinessLogicLayer.Models.Users;
 using Store.BusinessLogicLayer.Services.Interfaces;
 using Store.DataAccessLayer.Entities;
@@ -13,15 +14,17 @@ namespace Store.BusinessLogicLayer.Services
     {
         private IUserRepository _userRepository;
         private UserManager<User> _userManager;
+        private IMapper _imapper;
 
 
-        public AdminService(IUserRepository userRepository, UserManager<User> userManager)
+        public AdminService(IUserRepository userRepository, UserManager<User> userManager,
+                            IMapper imapper)
         {
             _userRepository = userRepository;
             _userManager = userManager;
-
+            _imapper = imapper;
         }
-        public async Task UpdateUserAsync(UserModel model)
+        public async Task<UserModel> UpdateUserAsync(UserModel model)
         {
             var user = await _userManager.FindByIdAsync(model.Id);
 
@@ -52,6 +55,10 @@ namespace Store.BusinessLogicLayer.Services
             }
 
             await _userRepository.UpdateAsync(user);
+
+            var userModel = _imapper.Map<UserModel>(user);
+
+            return userModel;
         }
     }
 }

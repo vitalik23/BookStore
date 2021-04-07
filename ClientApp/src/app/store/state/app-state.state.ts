@@ -7,6 +7,7 @@ import { PrintingEditionState } from "src/app/components/printing-edition/store/
 import { UserState } from "src/app/components/user/store/state/user.state";
 import { environment } from "src/environments/environment";
 import { BaseErrorState } from "./base-error.state";
+import { SpinnerState } from "./spinner.state";
 
 export interface AppState{
 
@@ -17,6 +18,7 @@ export interface AppState{
     order?: OrderState;
     printingEdition?:PrintingEditionState;
     errorMessage?: BaseErrorState;
+    spinner?: SpinnerState;
 }
 
 export const appReducers: ActionReducerMap<AppState> = {

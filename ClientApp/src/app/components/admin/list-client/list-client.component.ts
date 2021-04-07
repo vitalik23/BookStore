@@ -11,6 +11,8 @@ import { EditUserComponent } from './dialog/edit-user/edit-user.component';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { UserFilter } from '../models/user-filter.model';
 import { Constants } from 'src/app/constants/constants';
+import { ProgressBarComponent } from '../../progress-bar/progress-bar.component';
+import { isSpinnerShow } from 'src/app/store/selectors/spinner.selector';
 
 
 @Component({
@@ -46,6 +48,15 @@ export class ListClientComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+    this.store$.pipe(select(isSpinnerShow)).subscribe(
+      data => {
+        if(data){
+          return this.openDialog();
+        }
+        this.closeDialog();
+      }
+    );
 
     this.store$.pipe(select(getPageNumber)).subscribe(
       data => {
@@ -153,6 +164,12 @@ export class ListClientComponent implements OnInit {
     }, Constants.TIMEOUT);
   }
 
+  openDialog(){
+    this.matDialog.open(ProgressBarComponent);
+  }
 
+  closeDialog(){
+    this.matDialog.closeAll();
+  }
 
 }

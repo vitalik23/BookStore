@@ -23,8 +23,8 @@ namespace Store.PresentationLayer.Controllers
         [Route(Constants.Routes.CREATE_PRINTING_EDITION)]
         public async Task<IActionResult> CreatePrintingEditionAsync( PrintingEditionModel model)
         {
-            await _printingEditionService.CreatePrintingEditionAsync(model);
-            return Ok();
+            var printingEdition = await _printingEditionService.CreatePrintingEditionAsync(model);
+            return Ok(printingEdition);
         }
 
         [HttpPost]
@@ -40,8 +40,8 @@ namespace Store.PresentationLayer.Controllers
         [Route(Constants.Routes.UPDATE_PRINTING_EDITION)]
         public async Task<IActionResult> UpdatePrintingEditionAsync(PrintingEditionModel model)
         {
-            await _printingEditionService.UpdatePrintingEditionAsync(model);
-            return Ok();
+            var printingEdition = await _printingEditionService.UpdatePrintingEditionAsync(model);
+            return Ok(printingEdition);
         }
 
         [Authorize(Roles = Constants.AuthRoles.ADMIN_ROLE, AuthenticationSchemes = Constants.Token.BEARER)]

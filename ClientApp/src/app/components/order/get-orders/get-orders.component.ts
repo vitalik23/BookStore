@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
 import { select, Store } from '@ngrx/store';
 import { Constants } from 'src/app/constants/constants';
 import { StatusTypeEnum } from 'src/app/enums/status.enum';
+import { isSpinnerShow } from 'src/app/store/selectors/spinner.selector';
 import { AppState } from 'src/app/store/state/app-state.state';
+import { ProgressBarComponent } from '../../progress-bar/progress-bar.component';
 import { OrdersFilter } from '../models/filter-orders.model';
 import { OrderItemModel } from '../models/order-item.model';
 import { GetOrders } from '../store/actions/get-orders.action';
@@ -33,6 +36,7 @@ export class GetOrdersComponent implements OnInit {
   constructor(
     private store$: Store<AppState>,
     private formBuilder: FormBuilder,
+    private matDialog: MatDialog
   ) {
     this.checkboxForm = this.formBuilder.group({
       paid: false,
@@ -41,6 +45,15 @@ export class GetOrdersComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+    this.store$.pipe(select(isSpinnerShow)).subscribe(
+      data => {
+        if(data){
+          return this.openDialog();
+        }
+        this.closeDialog();
+      }
+    );
 
     this.store$.pipe(select(getData)).subscribe(
       data => {    
@@ -80,6 +93,13 @@ export class GetOrdersComponent implements OnInit {
     ));
   }
 
+  openDialog(){
+    this.matDialog.open(ProgressBarComponent);
+  }
+
+  closeDialog(){
+    this.matDialog.closeAll();
+  }
 
   pagedChanged(event) {
 

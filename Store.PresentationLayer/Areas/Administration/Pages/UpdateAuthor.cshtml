@@ -1,0 +1,16 @@
+﻿@page
+@model Store.PresentationLayer.Areas.Administration.Pages.UpdateAuthorModel
+@{
+}
+
+<form method="post">
+    <div>
+        <input type="hidden" asp-for="AuthorModel.Id" />
+    </div>
+    <div>
+        <input type="text" asp-for="AuthorModel.Name" />
+    </div>
+    <div>
+        <input type="submit" value="update" />
+    </div>
+</form>
